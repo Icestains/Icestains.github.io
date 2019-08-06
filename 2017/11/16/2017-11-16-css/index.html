@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>CSS选择器 | Icestains</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="转载自牢记31种CSS选择器用法 1 *1234* &amp;#123;  margin: 0;  padding: 0;&amp;#125;  星号选择器用于选取页面中的所有元素，可用于快速清除所有元素的 margin 与 padding，但最好只在测试的时候使用，而不要正式用在 CSS 文件中，否则会大大加重浏览器负担。此外，星号选择器也可以给父层的所有子元素设定样式，重复一遍，尽量少用这种方式： 123#c">
+<meta name="keywords" content="html,css">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS选择器">
+<meta property="og:url" content="http://icestains.top/2017/11/16/2017-11-16-css/index.html">
+<meta property="og:site_name" content="Icestains">
+<meta property="og:description" content="转载自牢记31种CSS选择器用法 1 *1234* &amp;#123;  margin: 0;  padding: 0;&amp;#125;  星号选择器用于选取页面中的所有元素，可用于快速清除所有元素的 margin 与 padding，但最好只在测试的时候使用，而不要正式用在 CSS 文件中，否则会大大加重浏览器负担。此外，星号选择器也可以给父层的所有子元素设定样式，重复一遍，尽量少用这种方式： 123#c">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-05-19T10:30:07.543Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CSS选择器">
+<meta name="twitter:description" content="转载自牢记31种CSS选择器用法 1 *1234* &amp;#123;  margin: 0;  padding: 0;&amp;#125;  星号选择器用于选取页面中的所有元素，可用于快速清除所有元素的 margin 与 padding，但最好只在测试的时候使用，而不要正式用在 CSS 文件中，否则会大大加重浏览器负担。此外，星号选择器也可以给父层的所有子元素设定样式，重复一遍，尽量少用这种方式： 123#c">
+  
+    <link rel="alternate" href="/atom.xml" title="Icestains" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Icestains</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://icestains.top"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-2017-11-16-css" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/11/16/2017-11-16-css/" class="article-date">
+  <time datetime="2017-11-15T16:00:00.000Z" itemprop="datePublished">2017-11-16</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      CSS选择器
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>转载自<a href="https://www.zybuluo.com/Rico/note/19592" target="_blank" rel="noopener">牢记31种CSS选择器用法</a></p>
+<h1 id="1"><a href="#1" class="headerlink" title="1 *"></a>1 *</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">* &#123;</span><br><span class="line">  margin: 0;</span><br><span class="line">  padding: 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>星号选择器用于选取页面中的所有元素，可用于快速清除所有元素的 margin 与 padding，但最好只在测试的时候使用，而不要正式用在 CSS 文件中，否则会大大加重浏览器负担。此外，星号选择器也可以给父层的所有子元素设定样式，重复一遍，尽量少用这种方式：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#container * &#123;</span><br><span class="line">  border: 1px solid black;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>兼容 IE6+</p>
+<h1 id="2-X"><a href="#2-X" class="headerlink" title="2 #X"></a>2 #X</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#container &#123;</span><br><span class="line">  width: 960px;</span><br><span class="line">  margin: auto;</span><br><span class="line">&#125;</span><br><span class="line">id 选择器，最常见的选择器用法之一，不可重复使用。</span><br><span class="line">兼容 IE6+</span><br></pre></td></tr></table></figure>
+
+<h1 id="3-X"><a href="#3-X" class="headerlink" title="3 .X"></a>3 .X</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.error &#123;</span><br><span class="line">  color: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>class 选择器，也是最常见的选择器用法之一，与 id 选择器不同的是 class 选择器可同时选取多个元素，而 id 选择器只能给一个独一无二的元素设定样式。</p>
+<p>兼容 IE6+</p>
+<h1 id="4-X-Y"><a href="#4-X-Y" class="headerlink" title="4　 X 　Y"></a>4　 X 　Y</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">li a &#123;</span><br><span class="line">  text-decoration: none;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>后代选择器 (descendant selector)，选取 X 元素<strong>内的所有</strong></p>
+<p>Y 元素，比如上面这段代码将选取 li 标签内的所有链接。</p>
+<p>兼容 IE6+</p>
+<h1 id="5-X"><a href="#5-X" class="headerlink" title="5 　X"></a>5 　X</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a &#123; color: red; &#125;</span><br><span class="line">ul &#123; margin-left: 0; &#125;</span><br></pre></td></tr></table></figure>
+
+<p>标签选择器 (type selector)，用于选取 HTML 标签 (tag)。</p>
+<p>兼容 IE6+</p>
+<h1 id="6-X-visited-and-X-link"><a href="#6-X-visited-and-X-link" class="headerlink" title="6　X:visited and X:link"></a>6　X:visited and X:link</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a:link &#123; color: red; &#125;</span><br><span class="line">a:visted &#123; color: purple; &#125;</span><br></pre></td></tr></table></figure>
+
+<p>:link 伪类选择器 (pseudo class selector) 用于选取所有未点击过的链接，而 :visited 则用于选取所有已访问过的链接。</p>
+<p>兼容 IE6+</p>
+<h1 id="7-X-Y"><a href="#7-X-Y" class="headerlink" title="7 X + Y"></a>7 X + Y</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ul + p &#123;</span><br><span class="line">  color: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>临近选择器 (adjacent selector)，选取紧邻在 X 元素后面出现的<strong>第一个</strong>元素，比如上面这段代码将选取 ul 元素后出现的第一个元素，也就是 p 元素。</p>
+<p>兼容性 IE6+</p>
+<h1 id="8-X-gt-Y"><a href="#8-X-gt-Y" class="headerlink" title="8　X &gt; Y"></a>8　X &gt; Y</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">div#container &gt; ul &#123;</span><br><span class="line">  border: 1px solid black;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在第 4 条中，后代选择器 X Y 选取父层 X 内的所有 Y 元素；子选择器 X &gt; Y 则只选取<strong>直接出现</strong>在父层 X 内的 Y 元素。比如下面的 HTML 结构中，#container &gt; ul 选取直接出现在 div#container 内的 ul 元素，不包含嵌套在 li 内的 ul 元素：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=&quot;container&quot;&gt;</span><br><span class="line"></span><br><span class="line"> &lt;ul&gt;</span><br><span class="line">&lt;li&gt; List Item</span><br><span class="line">  &lt;ul&gt;</span><br><span class="line">    &lt;li&gt; Child &lt;/li&gt;</span><br><span class="line">  &lt;/ul&gt;</span><br><span class="line">&lt;/li&gt;</span><br><span class="line">&lt;li&gt; List Item &lt;/li&gt;</span><br><span class="line">&lt;li&gt; List Item &lt;/li&gt;</span><br><span class="line">&lt;li&gt; List Item &lt;/li&gt;</span><br><span class="line"> &lt;/ul&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+
+<p>兼容 IE6+</p>
+<h1 id="9-X-Y"><a href="#9-X-Y" class="headerlink" title="9　 X ~ Y"></a>9　 X ~ Y</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ul ~ p &#123;</span><br><span class="line">  color: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>同样也是临近选择器，前面第 7 条 X + Y 选取紧邻在 X 后出现的第一个元素，而 X ~ Y 将选取 X 元素后出现的<strong>所有同级元素</strong>。上面这段代码将选取 ul 元素后出现的所有同级 p 元素，而不是像 ul + p 这样选取第一个出现的 p 元素。</p>
+<p>兼容 IE7+</p>
+<h1 id="10-X-title"><a href="#10-X-title" class="headerlink" title="10 X[title]"></a>10 X[title]</h1><p>a[title] {</p>
+<p>color: green;</p>
+<p>}</p>
+<p>属性选择器 (attributes selector)，根据元素使用的属性进一步缩小选取范围，上面这段代码将选取所有使用了 title 属性的链接。或者使用<code>a[title=&quot;title content&quot;]{color:green}</code></p>
+<p>再进一步缩小选取范围。</p>
+<p>兼容 IE7+</p>
+<h1 id="11-X-href-”foo”"><a href="#11-X-href-”foo”" class="headerlink" title="11　X[href=”foo”]"></a>11　X[href=”foo”]</h1><pre style="padding: 10px 15px; font-family: Monaco, Menlo, Consolas, &quot;Courier New&quot;, monospace; font-size: 14px; color: rgb(51, 51, 51); border-radius: 4px; display: block; margin: 0px 0px 20px; line-height: 20px; word-break: break-all; word-wrap: break-word; white-space: pre-wrap; background: none 0px 0px repeat scroll rgba(102, 128, 153, 0.05); border: 0px solid rgba(0, 0, 0, 0.15); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">a[href="http://net.tutsplus.com"] {
+  color: #1f6053; /* nettuts green */
+}</pre>
+
+<p>上面这段代码将选取所有跳转到</p>
+<p><code>http://net.tutsplus.com</code></p>
+<p>的链接，这些链接将显示为绿色，其他链接不受影响。</p>
+<p>只是这种方式很严格不能相差一个字符，下面将会逐一介绍更灵活的用法。</p>
+<p>兼容 IE7+</p>
+<h1 id="12-X-href-”nettuts”"><a href="#12-X-href-”nettuts”" class="headerlink" title="12 X[href*=”nettuts”]"></a>12 X[href*=”nettuts”]</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a[href*=&quot;tuts&quot;] &#123;</span><br><span class="line">  color: #1f6053; /* nettuts green */</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><code>*</code>表示只要属性值中<strong>包含</strong>双引号内的内容就满足选取要求，这段代码将选取跳转到 nettuts.com，net.tutsplus.com，或者 tutsplus.com 等链接。</p>
+<p>兼容 IE7+</p>
+<h1 id="13-X-href-”http”"><a href="#13-X-href-”http”" class="headerlink" title="13　X[href^=”http”]　"></a>13　X[href^=”http”]　</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a[href^=&quot;http&quot;] &#123;</span><br><span class="line">  background: url(path/to/external/icon.png) no-repeat;</span><br><span class="line">  padding-left: 10px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><code>^</code></p>
+<p>表示只要属性值以双引号内的内容开头就满足选取要求，这段代码也常用来给页面中所有外部接设定样式。</p>
+<p>兼容 IE7+</p>
+<h1 id="14-X-href-”-jpg”"><a href="#14-X-href-”-jpg”" class="headerlink" title="14 X[href$=”.jpg”]"></a>14 X[href$=”.jpg”]</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a[href$=&quot;.jpg&quot;] &#123;</span><br><span class="line">  color: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><code>$</code></p>
+<p>表示只要属性值以双引号内的内容<strong>结尾</strong>就满足选取要求，这段代码将选取所有跳转到 jpg 图片的链接。</p>
+<p>兼容 IE7+</p>
+<h1 id="15-X-data-”foo”"><a href="#15-X-data-”foo”" class="headerlink" title="15 X[data-*=”foo”]"></a>15 X[data-*=”foo”]</h1><p>上面第 14 条提到了如何选取所有跳转到 jpg 图片的链接，若要选取跳转到图片的所有链接可以用下面的方法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">a[href$=&quot;.jpg&quot;],</span><br><span class="line">a[href$=&quot;.jpeg&quot;],</span><br><span class="line">a[href$=&quot;.png&quot;],</span><br><span class="line">a[href$=&quot;.gif&quot;]</span><br><span class="line">&#123; color: red; &#125;</span><br></pre></td></tr></table></figure>
+
+<p>或者，先给图片链接添加 data- 属性（注：HTML5 Custom Data Attributes）</p>
+<p><code>&lt;a href=&quot;path/to/image.jpg&quot; data-filetype=&quot;image&quot;&gt; Image Link &lt;/a&gt;</code></p>
+<p>然后再通过属性选择器选取：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a[data-filetype=&quot;image&quot;] &#123;</span><br><span class="line">  color: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>兼容 IE7+</p>
+<h1 id="16-X-foo-”bar”"><a href="#16-X-foo-”bar”" class="headerlink" title="16 X[foo~=”bar”]"></a>16 X[foo~=”bar”]</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">a[data-info~=&quot;external&quot;] &#123;</span><br><span class="line">  color: red;</span><br><span class="line">&#125;</span><br><span class="line">a[data-info~=&quot;image&quot;] &#123;</span><br><span class="line">  border: 1px solid black;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>如果属性值中有用空格分隔的一连串属性值，~可以选取其中一个属性值，比如：</p>
+<p><code>&lt;a href=&quot;path/to/image.jpg&quot; data-info=&quot;external image&quot;&gt; Click Me, Fool &lt;/a&gt;</code></p>
+<p>借助 ~ 选取包含 external 或者 image 属性值的元素：</p>
+<p><code>/* Target data-info attr that contains the value &quot;external&quot; */</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">a[data-info~=&quot;external&quot;] &#123;</span><br><span class="line">  color: red;</span><br><span class="line">&#125;</span><br><span class="line">/* And which contain the value &quot;image&quot; */</span><br><span class="line">a[data-info~=&quot;image&quot;] &#123;</span><br><span class="line">  border: 1px solid black;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>兼容 IE7+</p>
+<h1 id="17-X-checked"><a href="#17-X-checked" class="headerlink" title="17 X:checked"></a>17 X:checked</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">input[type=radio]:checked &#123;</span><br><span class="line">  border: 1px solid black;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>:checked 伪类选择器用于选取所有标记为 checked 的元素，比如单选框 (radio button) 或复选框 (checkbox)。</p>
+<p>兼容 IE9+</p>
+<h1 id="18-X-after"><a href="#18-X-after" class="headerlink" title="18 X:after"></a>18 X:after</h1><p><a href="http://www.igooda.cn/jzjl/20131009384.html" target="_blank" rel="noopener">http://www.igooda.cn/jzjl/20131009384.html</a></p>
+<p>:before 与 :after 是两个令人兴奋的伪类选择器，几乎每天都有人发明出一些新用法，这里简单介绍一下如何用它清除浮动：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">.clearfix:after &#123;</span><br><span class="line">  content: &quot;&quot;;</span><br><span class="line">  display: block;</span><br><span class="line">  clear: both;</span><br><span class="line">  visibility: hidden;</span><br><span class="line">  font-size: 0;</span><br><span class="line">  height: 0;</span><br><span class="line">&#125;</span><br><span class="line">.clearfix &#123;</span><br><span class="line">  *display: inline-block;</span><br><span class="line">  _height: 1%;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这种方式通过 :after 在元素后面添加一块区域，然后将其隐藏，可以弥补 overflow: hidden; 的缺陷。</p>
+<p>根据 CSS3 选择器标准，理论上伪类选择器应该使用双冒号，但实际上浏览器也支持单冒号的形式，所以可以继续使用单冒号。</p>
+<p>兼容 IE8+</p>
+<h1 id="19-X-hover"><a href="#19-X-hover" class="headerlink" title="19 X:hover"></a>19 X:hover</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">div:hover &#123;</span><br><span class="line">  background: #e3e3e3;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>最常用的伪类选择器，不多解释了，只是需要注意 IE6 不支持将 :hover 作用于除 a 链接外的其他元素。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a:hover &#123;</span><br><span class="line"> border-bottom: 1px solid black;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>另外提醒一点：<code>border-bottom: 1px solid black;</code></p>
+<p>的效果要比</p>
+<p><code>text-decoration: underline;</code></p>
+<p>好看一些。</p>
+<p>兼容 IE6+ （在 IE6 中 :hover 只能作用于链接）</p>
+<h1 id="20-X-not-selector"><a href="#20-X-not-selector" class="headerlink" title="20 X:not(selector)"></a>20 X:not(selector)</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">div:not(#container) &#123;</span><br><span class="line">  color: blue;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>:not 伪类选择器有时会起到很重要的作用，假设现在要选取除 #contaienr 外的所有 div 元素，就可以用上面的代码实现。</p>
+<p>兼容 IE9+</p>
+<h1 id="21-X-pseudoElement"><a href="#21-X-pseudoElement" class="headerlink" title="21　X::pseudoElement"></a>21　X::pseudoElement</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">p::first-line &#123;</span><br><span class="line">  font-weight: bold;</span><br><span class="line">  font-size: 1.2em;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>通过伪元素（使用双冒号 ::）可以给元素的某一部分设定样式，比如第一行、或者第一个字母。需要注意的是，这只对块级元素 (block level elements) 生效。</p>
+<p>提示：伪元素 (pseudo element) 使用双冒号 ::</p>
+<p>选取段落的第一个字母</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">p::first-letter &#123;</span><br><span class="line">  float: left;</span><br><span class="line">  font-size: 2em;</span><br><span class="line">  font-weight: bold;</span><br><span class="line">  font-family: cursive;</span><br><span class="line">  padding-right: 2px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这段代码将选取页面中所有 p 元素，然后再选取其中的第一个字母。</p>
+<p>选取段落的第一行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">p::first-line &#123;</span><br><span class="line">  font-weight: bold;</span><br><span class="line">  font-size: 1.2em;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>与上面的例子类似，通过 ::first-line 选取页面的第一行。</p>
+<p>为了兼容 CSS1 与 CSS2 中的伪元素（比如 :first-line, :first-letter, :before 以及 :after），浏览器接受单冒号与双冒号两种格式，但对于 CSS3 中最新引入的伪元素，必须使用双冒号。</p>
+<p>兼容 IE6+</p>
+<h1 id="22-X-nth-child-n"><a href="#22-X-nth-child-n" class="headerlink" title="22 X:nth-child(n)"></a>22 X:nth-child(n)</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">li:nth-child(3) &#123;</span><br><span class="line">  color: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>:nth-child(n) 用于选取 stack 中的某一个元素，只接受整数作参数（参数从 1 开始计数），如果你想选取第二个 li 元素，只需这样写 li:nth-child(2)。</p>
+<p>也可以设定可变的参数，比如 li:nth-child(4n) 将选取第 4, 8 , 12… 个元素（4*n, n=1, n++）。</p>
+<p>兼容 IE9+</p>
+<h1 id="23-X-nth-last-child-n"><a href="#23-X-nth-last-child-n" class="headerlink" title="23 X:nth-last-child(n)"></a>23 X:nth-last-child(n)</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">li:nth-last-child(2) &#123;</span><br><span class="line">  color: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>除了正序（从上往下）选择，也可以使用 :nth-last-child(n) 倒序（从下往上）选择第几个元素，其他用法与第 22 条完全一样。</p>
+<p>兼容 IE9+</p>
+<h1 id="24-X-nth-of-type-n"><a href="#24-X-nth-of-type-n" class="headerlink" title="24 X:nth-of-type(n)"></a>24 X:nth-of-type(n)</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ul:nth-of-type(3) &#123;</span><br><span class="line">  border: 1px solid black;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>:nth-of-type(n) 的作用不是选取子元素 (child element)，而是选取同类元素 (type of element)。想象一下 HTML 文件中包含 5 个 ul 元素，现在要选取第三个，只需使用上面的代码，而不用再单独这个 ul 添加 id。</p>
+<p>关于 :nth-child 与 :nth-of-type 的区别，具体请查看 CSS-Tricks 网站的解释，简单来说，如果父层内只包含一种元素（比如都是 p 元素）那两种用法是等效的，如果父层包含多种元素（比如 p 元素与同级的其他元素），需要选取第几个 p 元素时应该用 :nth-of-type。</p>
+<p>兼容 IE9+</p>
+<h1 id="25-X-nth-last-of-type-n"><a href="#25-X-nth-last-of-type-n" class="headerlink" title="25 X:nth-last-of-type(n)"></a>25 X:nth-last-of-type(n)</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ul:nth-last-of-type(3) &#123;</span><br><span class="line">  border: 1px solid black;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>与第 24 条用法相同，倒序选取同类元素。</p>
+<p>兼容 IE9+</p>
+<h1 id="26-X-first-child"><a href="#26-X-first-child" class="headerlink" title="26 X:first-child"></a>26 X:first-child</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ul li:first-child &#123;</span><br><span class="line">  border-top: none;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>选取父层内的第一个子元素。</p>
+<p>兼容 IE7+</p>
+<h1 id="27-X-last-child"><a href="#27-X-last-child" class="headerlink" title="27 X:last-child"></a>27 X:last-child</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ul &gt; li:last-child &#123;</span><br><span class="line">  color: green;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>与第 26 条用法相同，区别在于 :last-child 选取父层元素内的最后一个子元素。</p>
+<p>:first-child 与 :last-child 通常用来清除边框 (border)，比如</p>
+<p><code>&lt;ul&gt;&lt;/ul&gt;</code></p>
+<p>内每个</p>
+<p><code>&lt;li&gt;&lt;/li&gt;</code></p>
+<p>都使用了 border-top 与 border-bottom 边框，结果是，第一个元素的上方与最后一个元素的下方会是单边框效果。这种情况可以用 :first-child 与 :last-child 清除上下的边框，而不用给第一个元素添加id=”first” 或者给最后一个元素添加 id=”last”。</p>
+<p>兼容 IE9+</p>
+<h1 id="28-X-only-child"><a href="#28-X-only-child" class="headerlink" title="28 X:only-child"></a>28 X:only-child</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">div p:only-child &#123;</span><br><span class="line">  color: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这个伪类选择器不常用，它可以选取包含唯一指定子元素的父层。比如上面的代码中将选取下面第一个 div 元素，而不是第二个 div 中的 p 元素。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"> &lt;div&gt;&lt;p&gt; My paragraph here. &lt;/p&gt;&lt;/div&gt;</span><br><span class="line"></span><br><span class="line"> &lt;div&gt;</span><br><span class="line"></span><br><span class="line">  &lt;p&gt; Two paragraphs total. &lt;/p&gt;</span><br><span class="line">  &lt;p&gt; Two paragraphs total. &lt;/p&gt;</span><br><span class="line"></span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+
+<p>兼容 IE9+</p>
+<h1 id="29-X-only-of-type"><a href="#29-X-only-of-type" class="headerlink" title="29 X:only-of-type"></a>29 X:only-of-type</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">li:only-of-type &#123;</span><br><span class="line">  font-weight: bold;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这个选择器会选取某个元素，并且这个元素在其父层内没有其他同级同类元素（不一定是唯一元素）。比如，要选取所有只包含<strong>一个</strong></p>
+<p>li 元素的 ul 元素该怎么做呢？如果使用 ul li 将选取所有 li 元素，应该使用 only-of-type。</p>
+<p>兼容 IE9+</p>
+<h1 id="30-X-first-of-type"><a href="#30-X-first-of-type" class="headerlink" title="30 X:first-of-type"></a>30 X:first-of-type</h1><p>first-of-type 伪类可以选取某种元素的第一个同类元素。</p>
+<p>为了更好地理解它的用法，现在思考一下如何在下面的 HTML 结构中选取 List Item 2 ？</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;div&gt;</span><br><span class="line">  &lt;p&gt; My paragraph here. &lt;/p&gt;</span><br><span class="line">  &lt;ul&gt;</span><br><span class="line">    &lt;li&gt; List Item 1 &lt;/li&gt;</span><br><span class="line">    &lt;li&gt; List Item 2 &lt;/li&gt;</span><br><span class="line">  &lt;/ul&gt;</span><br><span class="line">  &lt;ul&gt;</span><br><span class="line">    &lt;li&gt; List Item 3 &lt;/li&gt;</span><br><span class="line">    &lt;li&gt; List Item 4 &lt;/li&gt;</span><br><span class="line">  &lt;/ul&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+
+<p>方法一</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ul:first-of-type &gt; li:nth-child(2) &#123;</span><br><span class="line">  font-weight: bold;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这段代码的意思是：首先选取第一个 ul 元素；然后选取其中的所有直接子元素，也就是 li；最后选取第二个子元素。</p>
+<p>方法二</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">p + ul li:last-child &#123;</span><br><span class="line">  font-weight: bold;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>找到 p 元素后第一个出现的 ul 元素，然后选取其中的最后一个子元素。</p>
+<p>方法三</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ul:first-of-type li:nth-last-child(1) &#123;</span><br><span class="line">  font-weight: bold;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>找到第一个 ul 元素，然后从上往下选取第一个子元素。</p>
+<p>兼容 IE9+</p>
+<h1 id="31-伪类选择器叠用"><a href="#31-伪类选择器叠用" class="headerlink" title="31 伪类选择器叠用"></a>31 伪类选择器叠用</h1><p>有些伪类选择器或者伪元素是可以叠用的，例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">#post p:nth-of-type(2):first-letter &#123;</span><br><span class="line">  float: left;</span><br><span class="line">  margin: 0 5px 0 1em;</span><br><span class="line">  width: 1em;</span><br><span class="line">  height: 1em;</span><br><span class="line">  font-size: 2em;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>目测兼容 IE9+，听说 IE10 有个小 bug</p>
+<p>引用：<a href="http://www.cnblogs.com/moses/p/3436468.html" target="_blank" rel="noopener">http://www.cnblogs.com/moses/p/3436468.html</a></p>
+<p>下面是摘自<a href="http://www.uisdc.com/css-selector" target="_blank" rel="noopener">http://www.uisdc.com/css-selector</a>的</p>
+<h1 id="1、元素选择器"><a href="#1、元素选择器" class="headerlink" title="1、元素选择器"></a>1、元素选择器</h1><p>这是最基本的CSS选择器，HTML文档中的元素本身就是一个选择器：</p>
+<p><code>p {line-height:1.5em; margin-bottom:1em;}</code></p>
+<h1 id="2、关系选择器"><a href="#2、关系选择器" class="headerlink" title="2、关系选择器"></a>2、关系选择器</h1><p>E F：后代选择器，该选择器定位元素E的后代中所有元素F：</p>
+<p><code>ul li {margin-bottom:0.5em;}</code></p>
+<p>E &gt; F：子选择器，该选择器定位元素E的直接子元素中的所有元素F，它将忽略任何进一步的嵌套：</p>
+<p><code>ul &gt; li {list-style:none;}</code></p>
+<p>//仅限ul的直接子元素li，如果li里面还嵌套着另一个 ul 结构时，最里面的 li 将被忽略</p>
+<p>E + F：相邻兄弟选择器，该选择器定位与元素E具有相同父元素且在标记中紧邻E的元素F：</p>
+<p><code>li + li {border-top:1px solid #ddd;}</code></p>
+<p>//定位具有相同父元素ul里除第一个li之外的所有li</p>
+<p>E ~ F：一般兄弟选择器，该选择器定位与元素E具有相同父元素且在标记中位于E之后的所有元素F：</p>
+<p><code>h1 ~ p {color:#f00;}</code>//定位具有相同父元素的，h1标签之后的所有p标签</p>
+<h1 id="3、属性选择器"><a href="#3、属性选择器" class="headerlink" title="3、属性选择器"></a>3、属性选择器</h1><p>E[attr]：该选择器定位具有属性attr的任何元素E：</p>
+<p><code>input[required] {border:1px solid #f00;}</code></p>
+<p>//定位页面里所有具有必填属性”required”的input</p>
+<p>E[attr=val]：该选择器定位具有属性attr且属性值为val的任何元素E：</p>
+<p><code>input[type=password] {border:1px solid #aaa;}</code></p>
+<p>//定位页面里的密码输入框</p>
+<p>E[attr|=avl]：该选择器定位具有属性attr且属性值为val或以val-开始的任何元素E：</p>
+<p>p[class|=a] {color:#333;} //定位页面里所有的P段落里具有class属性且属性值为a或是a-开始的，比如class=”a”以及class=”a-b”</p>
+<p>E[attr~=val]：该选择器定位具有属性attr且属性值为完整单词 val 的任何元素E：</p>
+<p><code>div[title~=english] {color:#f88;}</code></p>
+<p>//定位页面里所有具有属性title且属性值里拥有完整单词english的div容器，比如title=”english”以及title=”a english”</p>
+<p>E[attr^=val]：该选择器定位具有属性attr且属性值以val开头的任何元素E：</p>
+<p><code>div[class^=a] {color:#666;}</code></p>
+<p>//定位页面里具有属性class且属性值以a开头的div容器，比如class=”a”以及class=”ab”</p>
+<p>E[attr$=val]：该选择器与E[attr^=val]正好相反，定位具有属性attr且属性值以val结尾的任何元素E：</p>
+<p><code>div[class$=a] {color:#f00;}</code></p>
+<p>//定位页面里具有属性class且属性值以a结尾的div窗口，比如class=”nba”以及class=”cba”</p>
+<p>E[attr*=val]：该选择器与E[attr~=val]相似，但更进一步，定位具有属性attr且属性值任意位置包含val的元素E，val可以是一个完整的单词，也可以是一个单词中的一部分：</p>
+<p><code>a[title*=link] {text-decoration:underline;}</code></p>
+<p>//定位所有title里具有link字符串的a链接</p>
+<p>或者可以看</p>
+<p><a href="https://github.com/HogwartsRico/blog/blob/master/posts/drafts/css/css_selectors.md" target="_blank" rel="noopener">css_selectors.md</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://icestains.top/2017/11/16/2017-11-16-css/" data-id="cjz03huo8000tukpfsb0vfl0e" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html-css/">html,css</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/04/14/2018-04-14-FEreport/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          前端值班记录
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/11/02/2017-11-02-git-Common-commands/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">git常用命令</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/">blog</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cpp/">cpp</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/font-end/">font-end</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/front-end-report/">front-end,report</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html-css/">html,css</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/blog/" style="font-size: 20px;">blog</a> <a href="/tags/cpp/" style="font-size: 10px;">cpp</a> <a href="/tags/font-end/" style="font-size: 10px;">font-end</a> <a href="/tags/front-end-report/" style="font-size: 10px;">front-end,report</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/html-css/" style="font-size: 10px;">html,css</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/08/07/博客再次复活/">&#39;博客再次复活&#39;</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/07/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2018/07/27/helloworld/">helloworld</a>
+          </li>
+        
+          <li>
+            <a href="/2018/04/14/2018-04-14-FEreport/">前端值班记录</a>
+          </li>
+        
+          <li>
+            <a href="/2017/11/16/2017-11-16-css/">CSS选择器</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 Icestains<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

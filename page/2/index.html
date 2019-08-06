@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>Icestains</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Icestains">
+<meta property="og:url" content="http://icestains.top/page/2/index.html">
+<meta property="og:site_name" content="Icestains">
+<meta property="og:locale" content="zh-Hans">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Icestains">
+  
+    <link rel="alternate" href="/atom.xml" title="Icestains" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Icestains</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://icestains.top"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-2017-04-24-Sublime text 3 with package control" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/04/24/2017-04-24-Sublime text 3 with package control/" class="article-date">
+  <time datetime="2017-04-23T16:00:00.000Z" itemprop="datePublished">2017-04-24</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/04/24/2017-04-24-Sublime text 3 with package control/">Sublime text 3 第一次激活、安装package control及插件方法</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>可以从<a href="https://www.sublimetext.com/" target="_blank" rel="noopener">官网</a>下载安装（官网同时可以找到sublime test2），如果觉得网速慢可以复制<a href="https://download.sublimetext.com/Sublime%20Text%20Build%203126%20x64%20Setup.exe" target="_blank" rel="noopener">这个链接</a>用迅雷下载。<br><br>打开exe文件，然后一路点击下一步，安装完成。</p>
+<hr>
+<h3 id="激活"><a href="#激活" class="headerlink" title="激活"></a>激活</h3><p>第一次打开sublime后，顶部会提示未激活，并且使用中也会有弹出框提示未激活。<br><br>那么点击菜单最右的<code>Help</code>&gt;<code>enter License</code> ，将下面这段激活码粘贴在弹出的窗口中，点击<code>use License</code> ，激活完成。<br><br>随着版本的更新，激活码可能会失效，此激活码适用3103以后的版本，后期更新版本失效后，善用Google或baidu：）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">—– BEGIN LICENSE —–</span><br><span class="line">Michael Barnes</span><br><span class="line">Single User License</span><br><span class="line">EA7E-821385</span><br><span class="line">8A353C41 872A0D5C DF9B2950 AFF6F667</span><br><span class="line">C458EA6D 8EA3C286 98D1D650 131A97AB</span><br><span class="line">AA919AEC EF20E143 B361B1E7 4C8B7F04</span><br><span class="line">B085E65E 2F5F5360 8489D422 FB8FC1AA</span><br><span class="line">93F6323C FD7F7544 3F39C318 D95E6480</span><br><span class="line">FCCC7561 8A4A1741 68FA4223 ADCEDE07</span><br><span class="line">200C25BE DBBC4855 C4CFB774 C5EC138C</span><br><span class="line">0FEC1CEF D9DCECEC D3A5DAD1 01316C36</span><br><span class="line">—— END LICENSE ——</span><br></pre></td></tr></table></figure>
+
+<h3 id="安装package-control"><a href="#安装package-control" class="headerlink" title="安装package control"></a>安装package control</h3><p>这里是<a href="https://packagecontrol.io/installation" target="_blank" rel="noopener">官方教程</a>。<br></p>
+<p>最简单的方法是通过Sublime Text控制台安装。通过快捷方式ctrl+` 或 <code>view</code> &gt;<code>Show Console</code> 菜单访问控制台。打开后，将适用于你的Sublime Text版本的Python代码粘贴到控制台中。 <br></p>
+<h4 id="sublime-text-3"><a href="#sublime-text-3" class="headerlink" title="sublime text 3:"></a>sublime text 3:</h4><blockquote>
+<p>import urllib.request,os,hashlib; h = ‘df21e130d211cfc94d9b0905775a7c0f’ + ‘1e3d39e33b79698005270310898eea76’; pf = ‘Package Control.sublime-package’; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( ‘<a href="http://packagecontrol.io/&#39;" target="_blank" rel="noopener">http://packagecontrol.io/&#39;</a> + pf.replace(‘ ‘, ‘%20’)).read(); dh = hashlib.sha256(by).hexdigest(); print(‘Error validating download (got %s instead of %s), please try manual install’ % (dh, h)) if dh != h else open(os.path.join( ipp, pf), ‘wb’ ).write(by)</p>
+</blockquote>
+<h4 id="sublime-text-2"><a href="#sublime-text-2" class="headerlink" title="sublime text 2:"></a>sublime text 2:</h4><blockquote>
+<p>import urllib2,os,hashlib; h = ‘df21e130d211cfc94d9b0905775a7c0f’ + ‘1e3d39e33b79698005270310898eea76’; pf = ‘Package Control.sublime-package’; ipp = sublime.installed_packages_path(); os.makedirs( ipp ) if not os.path.exists(ipp) else None; urllib2.install_opener( urllib2.build_opener( urllib2.ProxyHandler()) ); by = urllib2.urlopen( ‘<a href="http://packagecontrol.io/&#39;" target="_blank" rel="noopener">http://packagecontrol.io/&#39;</a> + pf.replace(‘ ‘, ‘%20’)).read(); dh = hashlib.sha256(by).hexdigest(); open( os.path.join( ipp, pf), ‘wb’ ).write(by) if dh == h else None; print(‘Error validating download (got %s instead of %s), please try manual install’ % (dh, h) if dh != h else ‘Please restart Sublime Text to finish installation’)</p>
+</blockquote>
+<p>官方警告：<br> 请不要通过其他网站重新分发安装代码。它将随着每个版本而改变。请链接到此页面。</p>
+<h4 id="如果使用代码安装失败"><a href="#如果使用代码安装失败" class="headerlink" title="如果使用代码安装失败"></a>如果使用代码安装失败</h4><p>我就是使用代码安装失败了。。这是官方给出的另一种方法。</p>
+<ol>
+<li>单击<code>Preferences</code> &gt; <code>Browse Packages…</code></li>
+<li>进入上一层目录，也就是<code>Sublime Text 3</code>目录下（电脑中的目录一般是C:\Users\username\AppData\Roaming\Sublime Text 3），然后进入<code>Installed Packages</code> 文件夹</li>
+<li>下载<a href="https://packagecontrol.io/Package%20Control.sublime-package" target="_blank" rel="noopener">Package Control.sublime-package</a> <a href="https://github.com/Icestains/Icestains.github.io/raw/master/files/Package%20Control.sublime-package" target="_blank" rel="noopener">备用链接</a> 并将其复制到<code>Installed Packages</code> 目录中</li>
+<li>重新启动sublime。</li>
+</ol>
+<p>安装成功时，<code>Installed Packages</code> 目录中会出现这样一个文件<code>0_package_control_loader.sublime-package</code>。再次进入<code>Preferences</code>菜单后，就可以看到<code>package setting</code>和<code>package control</code> 两个选项了。</p>
+<h3 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h3><ol>
+<li>按下<code>Ctrl+Shift+P</code> 调出命令面板</li>
+<li>输入<code>install</code> 调出 <code>Install Package</code> 选项并回车，然后在列表中选中要安装的插件。</li>
+</ol>
+<h3 id="推荐插件"><a href="#推荐插件" class="headerlink" title="推荐插件"></a>推荐插件</h3><p>AutoFileName：自动补全文件名<br></p>
+<p>Emmet：花10分钟学学语法，让你提升10倍编码速度：<a href="http://blog.wpjam.com/m/emmet-grammar/" target="_blank" rel="noopener">国内教程</a> <a href="https://docs.emmet.io/cheat-sheet/" target="_blank" rel="noopener">国外官方教程</a><br></p>
+<p>Go-To-Css-Declaration：跳转到css的定义处<br></p>
+<p>JsFormat：格式化js代码<br></p>
+<p>Tag：可以补全和格式化html标签<br></p>
+<p>Themr：主题选择<br></p>
+<p>Autoprefixer：自动添加浏览器兼容前缀<br></p>
+<p>CodeFormatter：代码格式化<br></p>
+<p>ConvertToUTF8：解决中文编码问题<br></p>
+<p>SublimeLinter：代码提示高亮<br></p>
+<p>Terminal：唤起终端控制台<br></p>
+<p>SideBarEnhancements：右键菜单增强插件<br></p>
+<p>MarkdownPreview：快速调用浏览器预览markdown文本<br></p>
+<p>MarkdownEditing：markdown编辑器，支持常用代码补全<br></p>
+<p>OmniMarkupPreviewer：markdown文本即时预览<br></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://icestains.top/2017/04/24/2017-04-24-Sublime text 3 with package control/" data-id="cjz03humg0004ukpfgshptf16" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-2017-04-14-build_blog" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/04/14/2017-04-14-build_blog/" class="article-date">
+  <time datetime="2017-04-13T16:00:00.000Z" itemprop="datePublished">2017-04-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/04/14/2017-04-14-build_blog/">转载：傻瓜都可以利用github pages建博客</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="傻瓜都可以利用github-pages建博客"><a href="#傻瓜都可以利用github-pages建博客" class="headerlink" title="傻瓜都可以利用github pages建博客"></a>傻瓜都可以利用github pages建博客</h3><p>原文出处：<a href="http://cyzus.github.io/2015/06/21/github-build-blog/" target="_blank" rel="noopener">http://cyzus.github.io/</a></p>
+<p>1.前言<br>鉴于我自身建站经历，不熟悉各种编码语言，口袋里没有多少钱，却殷切希望拥有一个独立的个人博客，在翻阅了各种教程后，看完各种眼花缭乱的代码后，终于将这个网站在github pages上搞出来了。在此，我不希望大家都重蹈覆辙，为了方便大家，我在此为大家做一个傻瓜教程<br>2.了解github<br>说了那么多，首先得了解一下什么是github，<strong>GitHub是一个共享虚拟主机服务，用于存放使用Git版本控制的软件代码和内容项目(引自维基百科）。</strong>说白了github就是开发者的百度云（有人说是Facebook），用来存储或者共享自己写的代码，非常便利，是近年来很火爆的一个网站服务。<br>3.为什么选择github?<br>能看到我的这篇文章的道友应该都知道，为什么我们要在github上建站？<br>github有一个很有爱的项目，叫做github pages，这个项目是给开发者建立一个私人页面，上面用来分享新颖的想法和自己写的代码，而且最主要的是，这个是免费而且没有空间流量限制的。这也就是我为什么放弃了自由度很高的，却需要支付高昂的主机费的wordpress，而转投了github pages阵营。<br>那么废话少说，开始我们的教程吧<br>4.注册github账号<br>打开<a href="https://github.com/" target="_blank" rel="noopener">https://github.com/</a>站点，注册一个账号<br><a href="http://cyzus.github.io/img/2015-6-21-github-build-blog/sign-up.jpg" target="_blank" rel="noopener"><img src="http://upload-images.jianshu.io/upload_images/3464381-647120d64cb97678.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="img"></a><br>拿到了这个账号你就可以做两件事啦<br>建立咱们的博客<br>托管自己写的代码</p>
+<p>我们今天主要讨论的当然还是建立博客~<br>5.完成注册<br>注册完后别急着关掉页面，先选择free来明确你<del>老子就是冲着免费来</del>的态度，然后甭管别的，直接点击下面绿色的<em>Finish sign up</em><br><a href="http://cyzus.github.io/img/2015-6-21-github-build-blog/free.jpg" target="_blank" rel="noopener"><img src="http://upload-images.jianshu.io/upload_images/3464381-a8a4c5f9c7dd528e.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="img"></a><br>接着，到你的邮箱<strong>验证账号</strong>，这样你才能之后生成你的个人主页<br>6.创建仓库<br>接下来到这个页面去创建一个新仓库<a href="https://github.com/new" target="_blank" rel="noopener">https://github.com/new</a><br>这个新仓库就将是存放你即将拥有的博客的地方<br>注意，你的仓库名不能随便取，这样会导致github混乱，取名的格式应该为“<strong>用户名.github.io</strong>”<br>后面的操作照配图做就可以了<br><a href="http://cyzus.github.io/img/2015-6-21-github-build-blog/build-repository.jpg" target="_blank" rel="noopener"><img src="http://upload-images.jianshu.io/upload_images/3464381-526d76b01a59de84.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="img"></a><br>7.进入仓库设置<br>建完仓库后，在当前页面右边选择Settings，进入设置页面，在这里生成你的github pages<br><a href="http://cyzus.github.io/img/2015-6-21-github-build-blog/settings.jpg" target="_blank" rel="noopener"><img src="http://upload-images.jianshu.io/upload_images/3464381-9f8d75ce3ce56380.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="img"></a><br>8.自动生成博客<br>在设置页面往下拉，在github pages那一栏点击“<strong>launch automatic page generator</strong>”<br><a href="http://cyzus.github.io/img/2015-6-21-github-build-blog/generate.jpg" target="_blank" rel="noopener"><img src="http://upload-images.jianshu.io/upload_images/3464381-526d76b01a59de84.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="img"></a><br>9.编辑用户界面<br>到这一步，其实是让你编辑你的页面上所展示的信息，如果你就只想有这一面的话，你就可以开始编辑了<br>title是页面的标题tagline是页面宣传词（这么理解吧）body就是正文了<br><a href="http://cyzus.github.io/img/2015-6-21-github-build-blog/edit1.jpg" target="_blank" rel="noopener"><img src="http://upload-images.jianshu.io/upload_images/3464381-9fd735aedbbe8437.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="img"></a><br>记住编辑是用markdown语言，如果你编辑完了（如果你要想有我这样的有很多页面的博客事实上根本不用管它），直接点下面的绿色按钮，“<strong>continue to layouts</strong>”<br><a href="http://cyzus.github.io/img/2015-6-21-github-build-blog/edit2.jpg" target="_blank" rel="noopener"><img src="http://upload-images.jianshu.io/upload_images/3464381-b600653f18e6d774.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="img"></a><br>10.公布页面<br>这一步对于只要一个展示页面的同学来说，应该算是终结了，选择一个喜欢的主题模板，然后点击“<strong>Publish page</strong>”，你的页面就公布出来了！<br><a href="http://cyzus.github.io/img/2015-6-21-github-build-blog/choose-themes.jpg" target="_blank" rel="noopener"><img src="http://upload-images.jianshu.io/upload_images/3464381-34a38016f45e2fd2.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="img"></a><br>如果还想继续做博客，那就继续看吧。<br>11.预览页面<br>在继续教程前，你可以先预览一下你的页面，但实际你最后做出的效果会和这个比起来好几百倍，但你可以先确认一下能不能显示出页面来<br>12.下载安装github<br>下载属于你的系统的github，并安装<br>Windows：<a href="https://windows.github.com/" target="_blank" rel="noopener">https://windows.github.com/</a><br>Mac： <a href="https://mac.github.com/" target="_blank" rel="noopener">https://mac.github.com/</a><br>我之后就用Windows示范了<br>13.克隆你的仓库<br>登录你的账号，在左上角点击“<strong>+</strong>”，然后选择“<strong>clone</strong>”，点击存放你博客的仓库，把它克隆到本地，并选择存放克隆文件位置，一般默认就好<br><a href="http://cyzus.github.io/img/2015-6-21-github-build-blog/clone.jpg" target="_blank" rel="noopener"><img src="http://upload-images.jianshu.io/upload_images/3464381-723c7b3200af3c18.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="img"></a><br>默认的位置在我的文档下的github文件夹里<br>14.选择主题框架<br>这时候，你就该真正考虑一下你的博客主题风格了，如果你前端开发的功底不好，就不建议频繁更换主题了，虽然要改也不是不行，只是要折腾就是了<br>到这个网站选择你喜欢的模板<a href="http://jekyllthemes.org/" target="_blank" rel="noopener">http://jekyllthemes.org/</a><br><a href="http://cyzus.github.io/img/2015-6-21-github-build-blog/themes-serious.jpg" target="_blank" rel="noopener"><img src="http://upload-images.jianshu.io/upload_images/3464381-86a7f56973b6dff1.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="img"></a><br>我就以这套模板为范例来进行教程，因为这个极其精简，可塑性（后期更改性）极强，推荐一下<a href="http://jekyllthemes.org/themes/cool-concise-high-end/" target="_blank" rel="noopener">http://jekyllthemes.org/themes/cool-concise-high-end/</a><br><a href="http://cyzus.github.io/img/2015-6-21-github-build-blog/cool-concise-high-end.jpg" target="_blank" rel="noopener"><img src="http://upload-images.jianshu.io/upload_images/3464381-5373b1fbc8398004.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="img"></a><br>点击“<strong>downlod</strong>”，把它下载下来吧<br>15.应用主题<br>打开存放你克隆下来仓库的文件夹，把里面的文件全部都删了（没错），除了隐藏文件夹“<strong>.git</strong>”不要删就好了，然后把模板里的东西全部拖到你的原博客仓库里<br><a href="http://cyzus.github.io/img/2015-6-21-github-build-blog/apply.jpg" target="_blank" rel="noopener"><img src="http://upload-images.jianshu.io/upload_images/3464381-42849061b9bc45fe.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="img"></a><br>16.配置博客<br>我先简单介绍一下这个仓库里的内容，你根据自身需要用文本编辑器来修改内容<br><a href="http://cyzus.github.io/img/2015-6-21-github-build-blog/list.jpg" target="_blank" rel="noopener"><img src="http://upload-images.jianshu.io/upload_images/3464381-2acc48d139963f58.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="img"></a><br>index.html：这是你博客的主页面，里面的内容就是你的主页了</p>
+<p>_config.yml：这是你博客的基本配置文件，里面有你博客的名字，以及存放博主的一些基本信息</p>
+<p>_layouts：这文件夹里面存放你每个页面的设计，一般有default.html（默认页面）和posts.html（博文页面）</p>
+<p>_includes：这个文件夹里的的内容将会通用到你博客每个页面，起到一种便利的作用</p>
+<p>_posts：这里面装的就是你的博文啦，记住，要用markdown语法写，要不上传会失败的。</p>
+<p>那么以上就是一个Jekyll规范的博客的基本内容了，想想也不难吧<br>17.上传到github<br>现在你已经把博客基本配置完成了，那么就该把它上传到github公布吧<br>打开github软件，你会发现changes那栏多了数字，这就是你本地文件发生改变数目的情况，在“<strong>summary</strong>”随便写串东西记录一下，然后按“<strong>commit to master</strong>”，等“<strong>Sync</strong>”出现数字后，你就戳那里同步到github吧！<br><a href="http://cyzus.github.io/img/2015-6-21-github-build-blog/upload.jpg" target="_blank" rel="noopener"><img src="http://upload-images.jianshu.io/upload_images/3464381-db6efe5a5aaaac25.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="img"></a><br><a href="http://cyzus.github.io/img/2015-6-21-github-build-blog/sync.jpg" target="_blank" rel="noopener"><img src="http://upload-images.jianshu.io/upload_images/3464381-0c7faac211b8c2a6.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="img"></a><br>18.后记<br>稍等一会儿，打开你的网站，就会发现你的博客已经神奇的出现了，比如我的：<a href="http://cyzfiles.github.io/" target="_blank" rel="noopener">http://cyzfiles.github.io/</a><br>那么教程到这儿也差不多完了，之后你可以在<strong>_posts</strong> 文件夹里继续撰写博文，然后按照<strong>第17步</strong> 上传到github即可</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://icestains.top/2017/04/14/2017-04-14-build_blog/" data-id="cjz03huo2000pukpfoztipvss" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-2017-04-11-hello world" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/04/11/2017-04-11-hello world/" class="article-date">
+  <time datetime="2017-04-10T16:00:00.000Z" itemprop="datePublished">2017-04-11</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/04/11/2017-04-11-hello world/">hello world</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>nothing here.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://icestains.top/2017/04/11/2017-04-11-hello world/" data-id="cjz03hum70001ukpfmj278rop" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-2017-04-11-test" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/04/11/2017-04-11-test/" class="article-date">
+  <time datetime="2017-04-10T16:00:00.000Z" itemprop="datePublished">2017-04-11</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/04/11/2017-04-11-test/">test</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="图片测试"><a href="#图片测试" class="headerlink" title="图片测试"></a>图片测试</h3><p><img src="/images/posts/test/avatar.jpg" alt="我的头像"></p>
+<br>
+
+<p><img src="/images/posts/test/background-cover.png" alt="我的背景"></p>
+<br>
+
+<img src="/images/posts/test/background-cover.png" height="450" width="800">
+
+<br>
+
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://icestains.top/2017/04/11/2017-04-11-test/" data-id="cjz03hulw0000ukpf3pl0w8ok" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+
+  <nav id="page-nav">
+    
+    <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+  </nav>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/">blog</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cpp/">cpp</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/font-end/">font-end</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/front-end-report/">front-end,report</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html-css/">html,css</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/blog/" style="font-size: 20px;">blog</a> <a href="/tags/cpp/" style="font-size: 10px;">cpp</a> <a href="/tags/font-end/" style="font-size: 10px;">font-end</a> <a href="/tags/front-end-report/" style="font-size: 10px;">front-end,report</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/html-css/" style="font-size: 10px;">html,css</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/08/07/博客再次复活/">&#39;博客再次复活&#39;</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/07/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2018/07/27/helloworld/">helloworld</a>
+          </li>
+        
+          <li>
+            <a href="/2018/04/14/2018-04-14-FEreport/">前端值班记录</a>
+          </li>
+        
+          <li>
+            <a href="/2017/11/16/2017-11-16-css/">CSS选择器</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 Icestains<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
