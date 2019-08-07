@@ -5,20 +5,19 @@
   
 
   
-  <title>hello world | Icestains</title>
+  <title>&#39;Django搭建博客：Fabric3 部署更新到远程服务器&#39; | Icestains</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="nothing here.">
-<meta name="keywords" content="blog">
+  <meta name="description" content="个人博客仓库博客链接 run 虚拟环境  1python manage.py runserver 8000  部署 使用了fabric来部署到远程服务器，通过github托管代码，将代码同步到服务器上。 参考博客使用 Fabric3 自动化部署  1234567891011121314151617181920212223242526272829303132from fabric.api impor">
 <meta property="og:type" content="article">
-<meta property="og:title" content="hello world">
-<meta property="og:url" content="http://icestains.top/2017/04/11/2017-04-11-hello world/index.html">
+<meta property="og:title" content="&#39;Django搭建博客：Fabric3 部署更新到远程服务器&#39;">
+<meta property="og:url" content="http://icestains.top/2019/07/17/build-Django-blog/index.html">
 <meta property="og:site_name" content="Icestains">
-<meta property="og:description" content="nothing here.">
+<meta property="og:description" content="个人博客仓库博客链接 run 虚拟环境  1python manage.py runserver 8000  部署 使用了fabric来部署到远程服务器，通过github托管代码，将代码同步到服务器上。 参考博客使用 Fabric3 自动化部署  1234567891011121314151617181920212223242526272829303132from fabric.api impor">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-19T10:30:07.534Z">
+<meta property="og:updated_time" content="2019-08-07T01:18:58.309Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="hello world">
-<meta name="twitter:description" content="nothing here.">
+<meta name="twitter:title" content="&#39;Django搭建博客：Fabric3 部署更新到远程服务器&#39;">
+<meta name="twitter:description" content="个人博客仓库博客链接 run 虚拟环境  1python manage.py runserver 8000  部署 使用了fabric来部署到远程服务器，通过github托管代码，将代码同步到服务器上。 参考博客使用 Fabric3 自动化部署  1234567891011121314151617181920212223242526272829303132from fabric.api impor">
   
     <link rel="alternate" href="/atom.xml" title="Icestains" type="application/atom+xml">
   
@@ -65,10 +64,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-2017-04-11-hello world" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-build-Django-blog" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2017/04/11/2017-04-11-hello world/" class="article-date">
-  <time datetime="2017-04-10T16:00:00.000Z" itemprop="datePublished">2017-04-11</time>
+    <a href="/2019/07/17/build-Django-blog/" class="article-date">
+  <time datetime="2019-07-17T01:09:59.000Z" itemprop="datePublished">2019-07-17</time>
 </a>
     
   </div>
@@ -79,7 +78,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      hello world
+      &#39;Django搭建博客：Fabric3 部署更新到远程服务器&#39;
     </h1>
   
 
@@ -87,35 +86,47 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>nothing here.</p>
+        <p>个人博客仓库<br><a href="http://47.103.5.67/" target="_blank" rel="noopener">博客链接</a></p>
+<h2 id="run"><a href="#run" class="headerlink" title="run"></a>run</h2><blockquote>
+<p>虚拟环境</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python manage.py runserver 8000</span><br></pre></td></tr></table></figure>
+
+<h2 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h2><blockquote>
+<p>使用了fabric来部署到远程服务器，通过github托管代码，将代码同步到服务器上。 参考博客使用 Fabric3 自动化部署</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">from fabric.api import env, run</span><br><span class="line"></span><br><span class="line">from fabric.operations import sudo</span><br><span class="line"></span><br><span class="line">GIT_REPO = &quot;https://github.com/Icestains/myblog.git&quot;</span><br><span class="line"></span><br><span class="line">env.user = &apos;icestains&apos;</span><br><span class="line">env.password = &apos;**********&apos;</span><br><span class="line"></span><br><span class="line"># 填写你自己的主机对应的域名</span><br><span class="line">env.hosts = [&apos;47.103.5.67&apos;]</span><br><span class="line"></span><br><span class="line"># 一般情况下为 22 端口，如果非 22 端口请查看你的主机服务提供商提供的信息</span><br><span class="line">env.port = &apos;22&apos;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 由于一些奇怪的bug 这里的shell命令会出现一些奇怪的问题，于是就直接在这里进入了虚拟环境</span><br><span class="line"># 从github仓库同步代码</span><br><span class="line"># 更新依赖，收集静态文件，更新 最后退出虚拟环境环境</span><br><span class="line">def deploy():</span><br><span class="line">    source_folder = &apos;/home/icestains/sites/icestains/myblog&apos;</span><br><span class="line">    run(&apos;cd %s &amp;&amp; git pull&apos; % source_folder)</span><br><span class="line">    run(&quot;&quot;&quot;</span><br><span class="line">        cd &#123;&#125; &amp;&amp;</span><br><span class="line">        source env/bin/activate &amp;&amp;</span><br><span class="line">        pip3 install -r requirements.txt &amp;&amp;</span><br><span class="line">        python3 manage.py collectstatic --noinput &amp;&amp;</span><br><span class="line">        python3 manage.py migrate &amp;&amp;</span><br><span class="line">        deactivate</span><br><span class="line">        &quot;&quot;&quot;.format(source_folder))</span><br><span class="line">    sudo(&apos;systemctl restart lcblog.service&apos;)</span><br><span class="line">    sudo(&apos;service nginx reload&apos;)</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>在febfile的目录下执行</p>
+</blockquote>
+<p>fab deploy<br>参考：<a href="https://www.zmrenwu.com" target="_blank" rel="noopener">https://www.zmrenwu.com</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://icestains.top/2017/04/11/2017-04-11-hello world/" data-id="cjz0kbpgj000198pfe9bui0f7" class="article-share-link">Share</a>
+      <a data-url="http://icestains.top/2019/07/17/build-Django-blog/" data-id="cjz0kbpht000f98pfw4ljk4dq" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li></ul>
-
     </footer>
   </div>
   
     
 <nav id="article-nav">
   
-    <a href="/2017/04/14/2017-04-14-build_blog/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/07/22/vue踩坑/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          转载：傻瓜都可以利用github pages建博客
+          (no title)
         
       </div>
     </a>
   
   
-    <a href="/2017/04/11/2017-04-11-test/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2018/08/05/重拾算法一/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">test</div>
+      <div class="article-nav-title">重拾算法</div>
     </a>
   
 </nav>
