@@ -62,10 +62,10 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-实习日记二" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-build-Django-blog" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2018/07/22/实习日记二/" class="article-date">
-  <time datetime="2018-07-21T16:00:00.000Z" itemprop="datePublished">2018-07-22</time>
+    <a href="/2019/07/17/build-Django-blog/" class="article-date">
+  <time datetime="2019-07-17T01:09:59.000Z" itemprop="datePublished">2019-07-17</time>
 </a>
     
   </div>
@@ -76,7 +76,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/22/实习日记二/">实习日记二</a>
+      <a class="article-title" href="/2019/07/17/build-Django-blog/">&#39;Django搭建博客：Fabric3 部署更新到远程服务器&#39;</a>
     </h1>
   
 
@@ -84,54 +84,28 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><code>摸鱼第二周</code></p>
-<hr>
-<h2 id="上周的工作"><a href="#上周的工作" class="headerlink" title="上周的工作"></a>上周的工作</h2><ul>
-<li>vue再次本当上手23333也不知道什么时候收藏夹里收藏过得vue教程重新翻出来看，不过还好，以前写过微信小程序，基本思路都一样，上手没难度。</li>
-<li>用vue写了一些小玩意，试了试一些好玩的功能，指路→<a href="https://icestains.github.io/vuetest/" target="_blank" rel="noopener">https://icestains.github.io/vuetest/</a>,之后可能会加一些新的好玩的东西上去，至少动画是要加上去的：）</li>
-</ul>
-<h3 id="上手GIS"><a href="#上手GIS" class="headerlink" title="上手GIS"></a>上手GIS</h3><ul>
-<li>空天信息研究所，画画地图咯。</li>
-<li>文档指路→<a href="http://anzhihun.coding.me/ol3-primer/index.html" target="_blank" rel="noopener">OpenLayers</a></li>
-<li>官方api文档 指路→<a href="https://openlayers.org" target="_blank" rel="noopener">OpenLayers API</a></li>
-</ul>
-<hr>
-<h2 id="今天了什么"><a href="#今天了什么" class="headerlink" title="今天了什么"></a>今天了什么</h2><ul>
-<li>参照文档搭建出了一个基本的地图实现了定位，放大缩小，移动地图，添加标记等一系列基本功能。离线地图绘制也掌握了一些，用离线图片也绘制出了相应的地图模块。</li>
-<li>写了一些小demo 指路→<a href="https://icestains.github.io/OpenLayers-Vue/" target="_blank" rel="noopener">OpenLayers demo</a></li>
-</ul>
-<hr>
-<h2 id="需要填的抗"><a href="#需要填的抗" class="headerlink" title="需要填的抗"></a>需要填的抗</h2><ul>
-<li><p>vue踩坑与填坑</p>
-<ul>
-<li>js引用图片问题</li>
-<li>bootstrap引入问题</li>
-<li>vuecli router的路径问题</li>
-<li>模块引用问题</li>
-</ul>
-</li>
-<li><p>OpenLayers踩坑与填坑</p>
-<ul>
-<li>baidu地图的偏移问题（坐标转换问题）</li>
-<li>地图的绘制与切换</li>
-<li>地图的标记方法参数解析</li>
-<li>矢量地图</li>
-<li>获取当前地图坐标信息</li>
-<li>瓦片地图</li>
-</ul>
-</li>
-</ul>
-<hr>
-<h2 id="明天emmmm"><a href="#明天emmmm" class="headerlink" title="明天emmmm"></a>明天emmmm</h2><p>明天看进度，后边东西还挺多的，两天看了还不到一半，后边熟悉之后应该会顺利一些</p>
+        <p>个人博客仓库<br><a href="http://47.103.5.67/" target="_blank" rel="noopener">博客链接</a></p>
+<h2 id="run"><a href="#run" class="headerlink" title="run"></a>run</h2><blockquote>
+<p>虚拟环境</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python manage.py runserver 8000</span><br></pre></td></tr></table></figure>
+
+<h2 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h2><blockquote>
+<p>使用了fabric来部署到远程服务器，通过github托管代码，将代码同步到服务器上。 参考博客使用 Fabric3 自动化部署</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">from fabric.api import env, run</span><br><span class="line"></span><br><span class="line">from fabric.operations import sudo</span><br><span class="line"></span><br><span class="line">GIT_REPO = &quot;https://github.com/Icestains/myblog.git&quot;</span><br><span class="line"></span><br><span class="line">env.user = &apos;icestains&apos;</span><br><span class="line">env.password = &apos;**********&apos;</span><br><span class="line"></span><br><span class="line"># 填写你自己的主机对应的域名</span><br><span class="line">env.hosts = [&apos;47.103.5.67&apos;]</span><br><span class="line"></span><br><span class="line"># 一般情况下为 22 端口，如果非 22 端口请查看你的主机服务提供商提供的信息</span><br><span class="line">env.port = &apos;22&apos;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 由于一些奇怪的bug 这里的shell命令会出现一些奇怪的问题，于是就直接在这里进入了虚拟环境</span><br><span class="line"># 从github仓库同步代码</span><br><span class="line"># 更新依赖，收集静态文件，更新 最后退出虚拟环境环境</span><br><span class="line">def deploy():</span><br><span class="line">    source_folder = &apos;/home/icestains/sites/icestains/myblog&apos;</span><br><span class="line">    run(&apos;cd %s &amp;&amp; git pull&apos; % source_folder)</span><br><span class="line">    run(&quot;&quot;&quot;</span><br><span class="line">        cd &#123;&#125; &amp;&amp;</span><br><span class="line">        source env/bin/activate &amp;&amp;</span><br><span class="line">        pip3 install -r requirements.txt &amp;&amp;</span><br><span class="line">        python3 manage.py collectstatic --noinput &amp;&amp;</span><br><span class="line">        python3 manage.py migrate &amp;&amp;</span><br><span class="line">        deactivate</span><br><span class="line">        &quot;&quot;&quot;.format(source_folder))</span><br><span class="line">    sudo(&apos;systemctl restart lcblog.service&apos;)</span><br><span class="line">    sudo(&apos;service nginx reload&apos;)</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>在febfile的目录下执行</p>
+</blockquote>
+<p>fab deploy<br>参考：<a href="https://www.zmrenwu.com" target="_blank" rel="noopener">https://www.zmrenwu.com</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://icestains.top/2018/07/22/实习日记二/" data-id="cjz5be51m0015ngpf2w6j5mkc" class="article-share-link">Share</a>
+      <a data-url="http://icestains.top/2019/07/17/build-Django-blog/" data-id="cjz5boh97000e80pfpqn73jmo" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日记/">日记</a></li></ul>
-
     </footer>
   </div>
   
@@ -139,10 +113,10 @@
 
 
   
-    <article id="post-实习日记" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-helloworld" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2018/07/18/实习日记/" class="article-date">
-  <time datetime="2018-07-18T15:16:00.000Z" itemprop="datePublished">2018-07-18</time>
+    <a href="/2018/07/27/helloworld/" class="article-date">
+  <time datetime="2018-07-26T16:23:06.000Z" itemprop="datePublished">2018-07-27</time>
 </a>
     
   </div>
@@ -153,7 +127,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/18/实习日记/">实习日记一</a>
+      <a class="article-title" href="/2018/07/27/helloworld/">helloworld</a>
     </h1>
   
 
@@ -161,41 +135,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="实习日记一"><a href="#实习日记一" class="headerlink" title="实习日记一"></a>实习日记一</h2><blockquote>
-<p>(摸鱼第四天)</p>
-</blockquote>
-<hr>
-<h2 id="记录一下最近做的事情吧"><a href="#记录一下最近做的事情吧" class="headerlink" title="记录一下最近做的事情吧"></a>记录一下最近做的事情吧</h2><h3 id="适应新的环境"><a href="#适应新的环境" class="headerlink" title="适应新的环境"></a>适应新的环境</h3><ul>
-<li>新的宿舍，六人间，但是实际只到了三个人，于是三个人都可以住在下铺了，分配了三个桌子，六个椅子可以非常舒服的分配空间了哈哈。</li>
-<li>组长今天刚回来，之前开会没他，然后这几天就完全就是在摸鱼状态，也没有什么具体的任务。</li>
-</ul>
-<h3 id="最近几天做的工作"><a href="#最近几天做的工作" class="headerlink" title="最近几天做的工作"></a>最近几天做的工作</h3><ul>
-<li>这里的电脑只可以访问内网，文件只能拷入不能拷出，于是环境配置过程中的所有的软件源都要用内部的，但是比较难受的就是一些软件和插件的缺失不好解决。</li>
-<li>大概了解了一下开发的内容，是一个地图加微信的软件，平台是魔改某为的一款手机，由于不是安卓，所以需要服务组的童靴们用C/C++去适配底层，我们组的主要任务就是用vue.js写界面和逻辑。</li>
-<li>配置环境。vue.js, vue-cli, node/yarn, 软件：webstorm, chrome, cmder 插件： less.</li>
-<li>vue以前看过一部分，最近正在看完整的文档，算是填之前开的坑吧。。</li>
-<li>vue-cli这次重新搭建，和以前搭建的时候有了挺大区别，应该是3.0的原因，看了一些博客大概是精简了很多配置文件。</li>
-<li>node好像看emmm好像没看完呢。。。填坑填坑。。不过这边用的是yarn，常用的命令好像没有太大区别。</li>
-<li>less/sass。本来三个常用的css预处理器，去年就应该上手用的，一直拖着就没有看，然后选了一个sass都马上看完了，今天组长发了一个项目模板，用的less。ok，fine，都看都看QAQ。(stylus: 你看看我 →_→ 。)</li>
-</ul>
-<hr>
-<h3 id="个人在做的"><a href="#个人在做的" class="headerlink" title="个人在做的"></a>个人在做的</h3><ul>
-<li>Django搭建的博客算是搭建（<a href="http://47.103.5.67/" target="_blank" rel="noopener">http://47.103.5.67/</a>）完了，最近在想给博客添加一些元素或者是修改一些元素，暂时没有什么好的想法。</li>
-<li>vue-cli正在上手，<a href="https://icestains.github.io/vuetest/" target="_blank" rel="noopener">这个链接</a>是目前在练手的一个项目（就是一个vue模板应用），有可能会把这个修改完成的放在博客的首页。</li>
-</ul>
-<hr>
-<blockquote>
-<p>明天应该会开一次小会，希望有点东西做。（摸鱼ing）</p>
-</blockquote>
-
+        <h2 id="Hello-World"><a href="#Hello-World" class="headerlink" title="Hello World"></a>Hello World</h2>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://icestains.top/2018/07/18/实习日记/" data-id="cjz5be507000ungpf07ypx22t" class="article-share-link">Share</a>
+      <a data-url="http://icestains.top/2018/07/27/helloworld/" data-id="cjz5boh9p000k80pf4pxhfele" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日记/">日记</a></li></ul>
-
     </footer>
   </div>
   
@@ -275,7 +221,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://icestains.top/2018/04/14/2018-04-14-FEreport/" data-id="cjz5be4zf000engpfsjl2dlfc" class="article-share-link">Share</a>
+      <a data-url="http://icestains.top/2018/04/14/2018-04-14-FEreport/" data-id="cjz5boh95000c80pfruef1gn4" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/front-end-report/">front-end,report</a></li></ul>
@@ -538,7 +484,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://icestains.top/2017/11/16/2017-11-16-css/" data-id="cjz5be5220019ngpfmb9xq772" class="article-share-link">Share</a>
+      <a data-url="http://icestains.top/2017/11/16/2017-11-16-css/" data-id="cjz5bohaw001f80pfze6dyedr" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html-css/">html,css</a></li></ul>
@@ -588,7 +534,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://icestains.top/2017/11/02/2017-11-02-git-Common-commands/" data-id="cjz5be4z60009ngpfjxtw0h0i" class="article-share-link">Share</a>
+      <a data-url="http://icestains.top/2017/11/02/2017-11-02-git-Common-commands/" data-id="cjz5boh92000980pfio13394t" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li></ul>
@@ -641,7 +587,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://icestains.top/2017/05/29/2017-05-29-potplayer/" data-id="cjz5be4z30008ngpf7k69dw6m" class="article-share-link">Share</a>
+      <a data-url="http://icestains.top/2017/05/29/2017-05-29-potplayer/" data-id="cjz5boh90000880pfa7ifh5gy" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li></ul>
@@ -683,7 +629,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://icestains.top/2017/05/19/2017-05-19-html_restart/" data-id="cjz5be4yy0005ngpfd6maotxv" class="article-share-link">Share</a>
+      <a data-url="http://icestains.top/2017/05/19/2017-05-19-html_restart/" data-id="cjz5boh8u000480pf0nywr004" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/font-end/">font-end</a></li></ul>
@@ -729,7 +675,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://icestains.top/2017/05/12/2017-05-12-CPP problem A-B/" data-id="cjz5be4yv0004ngpfe72194c2" class="article-share-link">Share</a>
+      <a data-url="http://icestains.top/2017/05/12/2017-05-12-CPP problem A-B/" data-id="cjz5boh8w000580pfe078riqf" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cpp/">cpp</a></li></ul>
@@ -812,7 +758,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://icestains.top/2017/05/05/2017-05-05-downloadvedio/" data-id="cjz5be51e0011ngpfcewg61n0" class="article-share-link">Share</a>
+      <a data-url="http://icestains.top/2017/05/05/2017-05-05-downloadvedio/" data-id="cjz5bohaq001980pf6ode6ai2" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li></ul>
@@ -891,7 +837,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://icestains.top/2017/04/24/2017-04-24-Sublime text 3 with package control/" data-id="cjz5be4yt0003ngpfbapu211m" class="article-share-link">Share</a>
+      <a data-url="http://icestains.top/2017/04/24/2017-04-24-Sublime text 3 with package control/" data-id="cjz5boh8r000380pfyfbxpwep" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li></ul>
@@ -921,7 +867,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/">blog</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cpp/">cpp</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/font-end/">font-end</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/front-end-report/">front-end,report</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html-css/">html,css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/日记/">日记</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/算法-Python/">算法, Python</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/">blog</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cpp/">cpp</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/design-pattern/">design-pattern</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/font-end/">font-end</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/front-end-report/">front-end,report</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html-css/">html,css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/日记/">日记</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/算法-Python/">算法, Python</a></li></ul>
     </div>
   </div>
 
@@ -931,7 +877,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/blog/" style="font-size: 20px;">blog</a> <a href="/tags/cpp/" style="font-size: 10px;">cpp</a> <a href="/tags/font-end/" style="font-size: 10px;">font-end</a> <a href="/tags/front-end-report/" style="font-size: 10px;">front-end,report</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/html-css/" style="font-size: 10px;">html,css</a> <a href="/tags/日记/" style="font-size: 15px;">日记</a> <a href="/tags/算法-Python/" style="font-size: 10px;">算法, Python</a>
+      <a href="/tags/blog/" style="font-size: 20px;">blog</a> <a href="/tags/cpp/" style="font-size: 10px;">cpp</a> <a href="/tags/design-pattern/" style="font-size: 10px;">design-pattern</a> <a href="/tags/font-end/" style="font-size: 10px;">font-end</a> <a href="/tags/front-end-report/" style="font-size: 10px;">front-end,report</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/html-css/" style="font-size: 10px;">html,css</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/日记/" style="font-size: 15px;">日记</a> <a href="/tags/算法-Python/" style="font-size: 10px;">算法, Python</a>
     </div>
   </div>
 
@@ -940,7 +886,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li></ul>
     </div>
   </div>
 
@@ -965,11 +911,11 @@
           </li>
         
           <li>
-            <a href="/2019/08/07/博客再次复活/">&#39;博客再次复活&#39;</a>
+            <a href="/2019/08/07/博客再次复活/">博客再次复活</a>
           </li>
         
           <li>
-            <a href="/2019/07/22/vue踩坑/">(no title)</a>
+            <a href="/2019/08/05/重拾算法一/">重拾算法</a>
           </li>
         
       </ul>
