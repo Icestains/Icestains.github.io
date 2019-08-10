@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>设计模式-singleton-js | Icestains</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="前言张肖飞在暑假放假前给我说：“你要好好准备面试了，比如我之前面试的时候面试官问我什么是单例模式，那你面试前端肯定也会问你js里的单例模式。”  我：“啥是单例模式？？？”  单例模式定义单例对象的类必须保证只有一个实例存在，提供一个全局访问点。 解决的问题一个全局使用的类频繁的创建与销毁。 何时使用想控制实例数目，节省系统资源的时候。 如何解决判断系统是否已经有这个单例，如果有则返回，如果没有则">
+<meta property="og:type" content="article">
+<meta property="og:title" content="设计模式-singleton-js">
+<meta property="og:url" content="http://icestains.top/2019/08/10/javascript-singleton/index.html">
+<meta property="og:site_name" content="Icestains">
+<meta property="og:description" content="前言张肖飞在暑假放假前给我说：“你要好好准备面试了，比如我之前面试的时候面试官问我什么是单例模式，那你面试前端肯定也会问你js里的单例模式。”  我：“啥是单例模式？？？”  单例模式定义单例对象的类必须保证只有一个实例存在，提供一个全局访问点。 解决的问题一个全局使用的类频繁的创建与销毁。 何时使用想控制实例数目，节省系统资源的时候。 如何解决判断系统是否已经有这个单例，如果有则返回，如果没有则">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-08-10T09:05:52.044Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="设计模式-singleton-js">
+<meta name="twitter:description" content="前言张肖飞在暑假放假前给我说：“你要好好准备面试了，比如我之前面试的时候面试官问我什么是单例模式，那你面试前端肯定也会问你js里的单例模式。”  我：“啥是单例模式？？？”  单例模式定义单例对象的类必须保证只有一个实例存在，提供一个全局访问点。 解决的问题一个全局使用的类频繁的创建与销毁。 何时使用想控制实例数目，节省系统资源的时候。 如何解决判断系统是否已经有这个单例，如果有则返回，如果没有则">
+  
+    <link rel="alternate" href="/atom.xml" title="Icestains" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Icestains</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://icestains.top"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-javascript-singleton" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/08/10/javascript-singleton/" class="article-date">
+  <time datetime="2019-08-10T07:20:35.000Z" itemprop="datePublished">2019-08-10</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      设计模式-singleton-js
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>张肖飞在暑假放假前给我说：“你要好好准备面试了，比如我之前面试的时候面试官问我什么是单例模式，那你面试前端肯定也会问你js里的单例模式。”</p>
+<blockquote>
+<p>我：“啥是单例模式？？？”</p>
+</blockquote>
+<h2 id="单例模式"><a href="#单例模式" class="headerlink" title="单例模式"></a>单例模式</h2><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>单例对象的类必须保证只有一个实例存在，提供一个全局访问点。</p>
+<h3 id="解决的问题"><a href="#解决的问题" class="headerlink" title="解决的问题"></a>解决的问题</h3><p>一个全局使用的类频繁的创建与销毁。</p>
+<h3 id="何时使用"><a href="#何时使用" class="headerlink" title="何时使用"></a>何时使用</h3><p>想控制实例数目，节省系统资源的时候。</p>
+<h3 id="如何解决"><a href="#如何解决" class="headerlink" title="如何解决"></a>如何解决</h3><p>判断系统是否已经有这个单例，如果有则返回，如果没有则创建。</p>
+<h3 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h3><p>线程池，全局缓存等。 window 对象就是一个单例。这种只需要一个对象的就用单例模式。</p>
+<h2 id="简单实现-js"><a href="#简单实现-js" class="headerlink" title="简单实现(js)"></a>简单实现(js)</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> Singleton = <span class="function"><span class="keyword">function</span>(<span class="params">name</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.name = name;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">Singleton.prototype.getName = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.name;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 获取实例对象</span></span><br><span class="line"><span class="keyword">var</span> getInstance = (<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> instance = <span class="literal">null</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params">name</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(!instance) &#123;</span><br><span class="line">            instance = <span class="keyword">new</span> Singleton(name);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> instance;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 测试单例模式的实例</span></span><br><span class="line"><span class="keyword">var</span> a = getInstance(<span class="string">"aa"</span>);</span><br><span class="line"><span class="keyword">var</span> b = getInstance(<span class="string">"bb"</span>);</span><br><span class="line"><span class="built_in">console</span>.log(b.getName()); <span class="comment">// "aa"</span></span><br><span class="line"><span class="built_in">console</span>.log(a === b);     <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+
+<p>封装一个获取实例的模块</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 获取实例的封装代码</span></span><br><span class="line"><span class="keyword">var</span> getInstance = <span class="function"><span class="keyword">function</span>(<span class="params">fn</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> result;</span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> result || (result = fn.call(<span class="keyword">this</span>,<span class="built_in">arguments</span>));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>ES5实现，封装一个函数，作为一个对象返回，</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">StorageSingleton</span> (<span class="params"></span>) </span>&#123;&#125;</span><br><span class="line">StorageSingleton.prototype.getItem = <span class="function"><span class="keyword">function</span> (<span class="params">key</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> localStorage.getItem(key)</span><br><span class="line">&#125;</span><br><span class="line">StorageSingleton.prototype.setItem = <span class="function"><span class="keyword">function</span> (<span class="params">key, value</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> localStorage.setItem(key, value)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> Storage = (<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> instance</span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> instance || instance = <span class="keyword">new</span> StorageSingleton()</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)()</span><br><span class="line"><span class="keyword">var</span> a = <span class="keyword">new</span> Storage()</span><br><span class="line"><span class="keyword">var</span> b = <span class="keyword">new</span> Storage()</span><br><span class="line">a === b <span class="comment">// true</span></span><br><span class="line">a.setItem(<span class="string">'a'</span>,<span class="string">'a'</span>)</span><br><span class="line">b.getItem(<span class="string">'a'</span>) <span class="comment">// 'a'</span></span><br></pre></td></tr></table></figure>
+
+<p>ES6原生加入了class的语法糖，这样的写法和其他语言的类构造方法相似</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Storage</span> </span>&#123;</span><br><span class="line">    <span class="keyword">constructor</span>()&#123;</span><br><span class="line">        <span class="keyword">if</span>(!Storage.instance)&#123;</span><br><span class="line">            Storage.instance = <span class="keyword">this</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> Storage.instance</span><br><span class="line">    &#125;</span><br><span class="line">    getItem (key) &#123;</span><br><span class="line">        <span class="keyword">return</span> localStorage.getItem(key)</span><br><span class="line">    &#125;</span><br><span class="line">    setItem (key, value) &#123;</span><br><span class="line">        <span class="keyword">return</span> localStorage.setItem(key, value)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> a = <span class="keyword">new</span> Storage()</span><br><span class="line"><span class="keyword">let</span> b = <span class="keyword">new</span> Storage()</span><br><span class="line">a === b <span class="comment">// true</span></span><br><span class="line">a.setItem(<span class="string">'a'</span>,<span class="string">'a'</span>)</span><br><span class="line">b.getItem(<span class="string">'a'</span>) <span class="comment">// 'a'</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="reference"><a href="#reference" class="headerlink" title="reference"></a>reference</h2><p><a href="https://zhuanlan.zhihu.com/p/51374135" target="_blank" rel="noopener">JS单例模式实现ES5/ES6</a></p>
+<p><a href="https://www.runoob.com/design-pattern/singleton-pattern.html" target="_blank" rel="noopener">单例模式</a></p>
+<p><a href="https://juejin.im/post/5c071f2ff265da6115109302" target="_blank" rel="noopener">jS设计模式二：单例模式</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://icestains.top/2019/08/10/javascript-singleton/" data-id="cjz5be4zu000mngpfrpk36zqc" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/08/10/design-pattern/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          design-pattern
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/08/09/what-happend-when-a-browser-get-a-url/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">&#39;浏览器输入URL后发生了什么&#39;</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/">blog</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cpp/">cpp</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/font-end/">font-end</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/front-end-report/">front-end,report</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html-css/">html,css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/日记/">日记</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/算法-Python/">算法, Python</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/blog/" style="font-size: 20px;">blog</a> <a href="/tags/cpp/" style="font-size: 10px;">cpp</a> <a href="/tags/font-end/" style="font-size: 10px;">font-end</a> <a href="/tags/front-end-report/" style="font-size: 10px;">front-end,report</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/html-css/" style="font-size: 10px;">html,css</a> <a href="/tags/日记/" style="font-size: 15px;">日记</a> <a href="/tags/算法-Python/" style="font-size: 10px;">算法, Python</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/08/10/design-pattern/">design-pattern</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/10/javascript-singleton/">设计模式-singleton-js</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/09/what-happend-when-a-browser-get-a-url/">&#39;浏览器输入URL后发生了什么&#39;</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/07/博客再次复活/">&#39;博客再次复活&#39;</a>
+          </li>
+        
+          <li>
+            <a href="/2019/07/22/vue踩坑/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 Icestains<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

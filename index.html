@@ -62,6 +62,284 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-design-pattern" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/08/10/design-pattern/" class="article-date">
+  <time datetime="2019-08-10T08:29:07.000Z" itemprop="datePublished">2019-08-10</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/10/design-pattern/">design-pattern</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="设计模式目录"><a href="#设计模式目录" class="headerlink" title="设计模式目录"></a>设计模式目录</h2><p>创建型</p>
+<ol>
+<li>Factory Method（工厂方法）</li>
+<li>Abstract Factory（抽象工厂）</li>
+<li>Builder（建造者）</li>
+<li>Prototype（原型）</li>
+<li><a href="/javascript-singleton.html">Singleton（单例）</a></li>
+</ol>
+<p>结构型</p>
+<ol>
+<li>Adapter Class/Object（适配器）</li>
+<li>Bridge（桥接）</li>
+<li>Composite（组合）</li>
+<li>Decorator（装饰）</li>
+<li>Facade（外观）</li>
+<li>Flyweight（享元）</li>
+<li>Proxy（代理）</li>
+</ol>
+<p>行为型</p>
+<ol>
+<li>Interpreter（解释器）</li>
+<li>Template Method（模板方法）</li>
+<li>Chain of Responsibility（责任链）</li>
+<li>Command（命令）</li>
+<li>Iterator（迭代器）</li>
+<li>Mediator（中介者）</li>
+<li>Memento（备忘录）</li>
+<li>Observer（观察者）</li>
+<li>State（状态）</li>
+<li>Strategy（策略）</li>
+<li>Visitor（访问者）</li>
+</ol>
+<h2 id="设计模式简介"><a href="#设计模式简介" class="headerlink" title="设计模式简介"></a>设计模式简介</h2><blockquote>
+<p>设计模式是软件开发人员在软件开发过程中面临的一般问题的解决方案。这些解决方案是众多软件开发人员经过相当长的一段时间的试验和错误总结出来的。<br>设计模式是一套被反复使用的、多数人知晓的、经过分类编目的、代码设计经验的总结。使用设计模式是为了重用代码、让代码更容易被他人理解、保证代码可靠性。</p>
+</blockquote>
+<h2 id="什么是-GOF（四人帮，全拼-Gang-of-Four）"><a href="#什么是-GOF（四人帮，全拼-Gang-of-Four）" class="headerlink" title="什么是 GOF（四人帮，全拼 Gang of Four）"></a>什么是 GOF（四人帮，全拼 Gang of Four）</h2><p>在 1994 年，由 Erich Gamma、Richard Helm、Ralph Johnson 和 John Vlissides 四人合著出版了一本名为 Design Patterns - Elements of Reusable Object-Oriented Software（中文译名：设计模式 - 可复用的面向对象软件元素） 的书，该书首次提到了软件开发中设计模式的概念。</p>
+<p>四位作者合称 GOF（四人帮，全拼 Gang of Four）。他们所提出的设计模式主要是基于以下的面向对象设计原则。</p>
+<p>对接口编程而不是对实现编程。<br>优先使用对象组合而不是继承。</p>
+<p><del>~ 这个坑有点大，晚点再进去，很多已经熟悉的用法可能已经用了设计模式中的某些方法，只是没有主要到而已 ~</del></p>
+<h2 id="reference"><a href="#reference" class="headerlink" title="reference"></a>reference</h2><p><a href="https://www.infoq.cn/article/design-patterns-proposed-by-gof-20-years-ago" target="_blank" rel="noopener">20 年前 GoF 提出的设计模式，对这个时代是否还有指导意义？</a></p>
+<p><a href="https://blog.csdn.net/zhangcanyan/article/details/51622380" target="_blank" rel="noopener">GOF 23种设计模式</a></p>
+<p><a href="https://www.runoob.com/design-pattern/design-pattern-tutorial.html" target="_blank" rel="noopener">设计模式-菜鸟教程</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://icestains.top/2019/08/10/design-pattern/" data-id="cjz5be4z9000cngpfuxe5gyax" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-javascript-singleton" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/08/10/javascript-singleton/" class="article-date">
+  <time datetime="2019-08-10T07:20:35.000Z" itemprop="datePublished">2019-08-10</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/10/javascript-singleton/">设计模式-singleton-js</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>张肖飞在暑假放假前给我说：“你要好好准备面试了，比如我之前面试的时候面试官问我什么是单例模式，那你面试前端肯定也会问你js里的单例模式。”</p>
+<blockquote>
+<p>我：“啥是单例模式？？？”</p>
+</blockquote>
+<h2 id="单例模式"><a href="#单例模式" class="headerlink" title="单例模式"></a>单例模式</h2><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>单例对象的类必须保证只有一个实例存在，提供一个全局访问点。</p>
+<h3 id="解决的问题"><a href="#解决的问题" class="headerlink" title="解决的问题"></a>解决的问题</h3><p>一个全局使用的类频繁的创建与销毁。</p>
+<h3 id="何时使用"><a href="#何时使用" class="headerlink" title="何时使用"></a>何时使用</h3><p>想控制实例数目，节省系统资源的时候。</p>
+<h3 id="如何解决"><a href="#如何解决" class="headerlink" title="如何解决"></a>如何解决</h3><p>判断系统是否已经有这个单例，如果有则返回，如果没有则创建。</p>
+<h3 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h3><p>线程池，全局缓存等。 window 对象就是一个单例。这种只需要一个对象的就用单例模式。</p>
+<h2 id="简单实现-js"><a href="#简单实现-js" class="headerlink" title="简单实现(js)"></a>简单实现(js)</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> Singleton = <span class="function"><span class="keyword">function</span>(<span class="params">name</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.name = name;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">Singleton.prototype.getName = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.name;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 获取实例对象</span></span><br><span class="line"><span class="keyword">var</span> getInstance = (<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> instance = <span class="literal">null</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params">name</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(!instance) &#123;</span><br><span class="line">            instance = <span class="keyword">new</span> Singleton(name);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> instance;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 测试单例模式的实例</span></span><br><span class="line"><span class="keyword">var</span> a = getInstance(<span class="string">"aa"</span>);</span><br><span class="line"><span class="keyword">var</span> b = getInstance(<span class="string">"bb"</span>);</span><br><span class="line"><span class="built_in">console</span>.log(b.getName()); <span class="comment">// "aa"</span></span><br><span class="line"><span class="built_in">console</span>.log(a === b);     <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+
+<p>封装一个获取实例的模块</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 获取实例的封装代码</span></span><br><span class="line"><span class="keyword">var</span> getInstance = <span class="function"><span class="keyword">function</span>(<span class="params">fn</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> result;</span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> result || (result = fn.call(<span class="keyword">this</span>,<span class="built_in">arguments</span>));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>ES5实现，封装一个函数，作为一个对象返回，</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">StorageSingleton</span> (<span class="params"></span>) </span>&#123;&#125;</span><br><span class="line">StorageSingleton.prototype.getItem = <span class="function"><span class="keyword">function</span> (<span class="params">key</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> localStorage.getItem(key)</span><br><span class="line">&#125;</span><br><span class="line">StorageSingleton.prototype.setItem = <span class="function"><span class="keyword">function</span> (<span class="params">key, value</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> localStorage.setItem(key, value)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> Storage = (<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> instance</span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> instance || instance = <span class="keyword">new</span> StorageSingleton()</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)()</span><br><span class="line"><span class="keyword">var</span> a = <span class="keyword">new</span> Storage()</span><br><span class="line"><span class="keyword">var</span> b = <span class="keyword">new</span> Storage()</span><br><span class="line">a === b <span class="comment">// true</span></span><br><span class="line">a.setItem(<span class="string">'a'</span>,<span class="string">'a'</span>)</span><br><span class="line">b.getItem(<span class="string">'a'</span>) <span class="comment">// 'a'</span></span><br></pre></td></tr></table></figure>
+
+<p>ES6原生加入了class的语法糖，这样的写法和其他语言的类构造方法相似</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Storage</span> </span>&#123;</span><br><span class="line">    <span class="keyword">constructor</span>()&#123;</span><br><span class="line">        <span class="keyword">if</span>(!Storage.instance)&#123;</span><br><span class="line">            Storage.instance = <span class="keyword">this</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> Storage.instance</span><br><span class="line">    &#125;</span><br><span class="line">    getItem (key) &#123;</span><br><span class="line">        <span class="keyword">return</span> localStorage.getItem(key)</span><br><span class="line">    &#125;</span><br><span class="line">    setItem (key, value) &#123;</span><br><span class="line">        <span class="keyword">return</span> localStorage.setItem(key, value)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> a = <span class="keyword">new</span> Storage()</span><br><span class="line"><span class="keyword">let</span> b = <span class="keyword">new</span> Storage()</span><br><span class="line">a === b <span class="comment">// true</span></span><br><span class="line">a.setItem(<span class="string">'a'</span>,<span class="string">'a'</span>)</span><br><span class="line">b.getItem(<span class="string">'a'</span>) <span class="comment">// 'a'</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="reference"><a href="#reference" class="headerlink" title="reference"></a>reference</h2><p><a href="https://zhuanlan.zhihu.com/p/51374135" target="_blank" rel="noopener">JS单例模式实现ES5/ES6</a></p>
+<p><a href="https://www.runoob.com/design-pattern/singleton-pattern.html" target="_blank" rel="noopener">单例模式</a></p>
+<p><a href="https://juejin.im/post/5c071f2ff265da6115109302" target="_blank" rel="noopener">jS设计模式二：单例模式</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://icestains.top/2019/08/10/javascript-singleton/" data-id="cjz5be4zu000mngpfrpk36zqc" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-what-happend-when-a-browser-get-a-url" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/08/09/what-happend-when-a-browser-get-a-url/" class="article-date">
+  <time datetime="2019-08-09T08:40:11.000Z" itemprop="datePublished">2019-08-09</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/09/what-happend-when-a-browser-get-a-url/">&#39;浏览器输入URL后发生了什么&#39;</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><ol>
+<li>DNS域名解析</li>
+<li>建立TCP连接</li>
+<li>发送HTTP请求</li>
+<li>处理器处理请求</li>
+<li>返回响应结果</li>
+<li>关闭TCP连接</li>
+<li>浏览器解析HTML</li>
+<li>浏览器渲染布局</li>
+</ol>
+<h2 id="客户端检查"><a href="#客户端检查" class="headerlink" title="客户端检查"></a>客户端检查</h2><p>第一步不是解析地址，而是输入地址，并且要看你输入的地址是否合法。。</p>
+<h2 id="DNS域名解析"><a href="#DNS域名解析" class="headerlink" title="DNS域名解析"></a>DNS域名解析</h2><p>第一步解析URL所对应的的ip地址，如果本地（一般是DNS cache，hosts文件内的对应关系）有，则建立连接；如果没有，去dns服务器找。</p>
+<p>客户端向本地dns服务器发送请求<a href="www.baidu.com">www.baidu.com</a></p>
+<blockquote>
+<p>本地DNS服务器迭代查询过程</p>
+</blockquote>
+<ul>
+<li>→ 本地dns服务器先去根dns服务器查找，得到comDNS服务器ip地址返回给本地DNS服务器</li>
+<li>→ 本地DNS服务器再去comDNS服务器查询，comDNS服务器去查询<a href="www.baidu.com">www.baidu.com</a>的相关DNS服务器的IP地址并返回给本地DNS服务器。</li>
+<li>→ 本地DNS将获取到的IP地址返回给客户端。</li>
+</ul>
+<p>客户端到本地DNS服务器是递归查询，本地DNS服务器查询过程属于迭代查询。</p>
+<p>一般情况下，本地DNS服务器缓存了部分DNS服务器地址，可以直接返回结果。</p>
+<p>如果请求的资源是静态资源，有可能会到达cdn服务器；如果请求的是动态资源，流量可能会经过代理/网关，web服务器，应用服务器，数据库。对于大型应用来说，一般还会有负载均衡处理，由集群处理请求，集群之间通过实现会话同步、健康检查等机制来保证高可用。</p>
+<p>后台服务器的部署架构又是另一方向的问题了。</p>
+<h2 id="建立连接"><a href="#建立连接" class="headerlink" title="建立连接"></a>建立连接</h2><p>客户端获取到服务器ip地址后，就要建立连接。整个过程可以分解为建立连接、发送 HTTP 请求、返回 HTTP 响应、维持连接、释放连接五个部分</p>
+<h3 id="TCP三次握手"><a href="#TCP三次握手" class="headerlink" title="TCP三次握手"></a>TCP三次握手</h3><ol>
+<li>客户端发送带有SYN标志的数据包给服务端</li>
+<li>服务端收到后，返回一个带有SYN/ACK标志的数据包，以示传达确认信息</li>
+<li>客户端收到确认信息后再回传一个带ACK标志的数据包，握手结束。</li>
+</ol>
+<p>连接成功</p>
+<h2 id="发送HTTP请求"><a href="#发送HTTP请求" class="headerlink" title="发送HTTP请求"></a>发送HTTP请求</h2><p>https建立的连接会进行信息加密，一般是用TLS，加密后的信息再由TCP传输。</p>
+<h3 id="请求报文"><a href="#请求报文" class="headerlink" title="请求报文"></a>请求报文</h3><table>
+<thead>
+<tr>
+<th>报文首部</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>请求行</td>
+</tr>
+<tr>
+<td>请求首部字段</td>
+</tr>
+<tr>
+<td>通用首部字段</td>
+</tr>
+<tr>
+<td>实体首部字段</td>
+</tr>
+<tr>
+<td>其他</td>
+</tr>
+</tbody></table>
+<ul>
+<li>请求行包括请求方法，URL，HTTP版本。</li>
+<li>首部字段传递重要信息，包括请求首部字段、通用首部字和实体首部字段。</li>
+</ul>
+<h2 id="服务器处理请求"><a href="#服务器处理请求" class="headerlink" title="服务器处理请求"></a>服务器处理请求</h2><p>服务器端收到请求后，由web服务器（http服务器）处理请求，后端如apache，ngnix，iis等服务处理。解析用户请求后，将资源文件处理后返回给浏览器客户端。如果有动态资源的话，还需要通过数据库调度返回信息。</p>
+<h2 id="返回响应结果"><a href="#返回响应结果" class="headerlink" title="返回响应结果"></a>返回响应结果</h2><p>|响应报文|<br>|—|—|<br>|报文首部|<br>|空行|<br>|报文主体|</p>
+<table>
+<thead>
+<tr>
+<th>报文首部</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>状态行</td>
+</tr>
+<tr>
+<td>响应首部字段</td>
+</tr>
+<tr>
+<td>通用首部字段</td>
+</tr>
+<tr>
+<td>实体首部字段</td>
+</tr>
+<tr>
+<td>其他</td>
+</tr>
+</tbody></table>
+<h3 id="HTTP状态码类别"><a href="#HTTP状态码类别" class="headerlink" title="HTTP状态码类别"></a>HTTP状态码类别</h3><p>响应结果中会有一个HTTP状态码<br>||类别|原因|<br>|—|—|—|<br>|1xx|信息性状态码|接收的请求正在处理|<br>|2xx|成功状态码|请求正常处理完毕|<br>|3xx|重定向状态码|需要进行附加操作以完成请求|<br>|4xx|客户端错误状态码|服务器无法处理请求|<br>|5xx|服务器错误状态码|服务器处理请求出错|</p>
+<h2 id="维持连接"><a href="#维持连接" class="headerlink" title="维持连接"></a>维持连接</h2><p>完成一次 HTTP 请求后，服务器并不是马上断开与客户端的连接。在 HTTP/1.1 中，Connection: keep-alive 是默认启用的，表示持久连接，以便处理不久后到来的新请求，无需重新建立连接而增加慢启动开销，提高网络的吞吐能力。在反向代理软件 Nginx 中，持久连接超时时间默认值为 75 秒，如果 75 秒内没有新到达的请求，则断开与客户端的连接。同时，浏览器每隔 45 秒会向服务器发送 TCP keep-alive 探测包，来判断 TCP 连接状况，如果没有收到 ACK 应答，则主动断开与服务器的连接。注意，HTTP keep-alive 和 TCP keep-alive 虽然都是一种保活机制，但是它们完全不相同，一个作用于应用层，一个作用于传输层。</p>
+<h2 id="关闭TCP连接"><a href="#关闭TCP连接" class="headerlink" title="关闭TCP连接"></a>关闭TCP连接</h2><p>为了避免服务器与客户端双方的资源占用和损耗，当双方没有请求或响应传递时，任意一方都可以发起关闭请求。与创建TCP连接的3次握手类似，关闭TCP连接，需要4次握手。</p>
+<ol>
+<li>客户端发送FIN(m)</li>
+<li>服务端收到后发送ACK(m+1)</li>
+<li>服务端再次发送FIN(n)</li>
+<li>客户端收到后回复ACK(n+1)</li>
+</ol>
+<h2 id="浏览器解析HTML"><a href="#浏览器解析HTML" class="headerlink" title="浏览器解析HTML"></a>浏览器解析HTML</h2><p>一般来说，浏览器解析网址之后获取到的都是一个HTML网页，当然也不止只有一个HTML，还有CSS JS，图片视频等资源。<br>浏览器获取到HTML之后，开始构建DOM数，解析CSS之后，生成CSS规则树，然后通过DOM树和CSS规则树生成渲染树。渲染树种没有<code>head</code>，<code>display:none;</code>之类的元素节点.</p>
+<p>解析过程中遇到css可以继续解析HTML，但是在解析到JS后悔停止解析HTML，出现阻塞。</p>
+<h2 id="浏览器布局渲染"><a href="#浏览器布局渲染" class="headerlink" title="浏览器布局渲染"></a>浏览器布局渲染</h2><p>根据渲染树布局，计算CSS样式，即每个节点在页面中的大小和位置等几何信息。HTML默认是流式布局的，CSS和js会打破这种布局，改变DOM的外观样式以及大小和位置。这时就要提到两个重要概念：replaint和reflow。</p>
+<ul>
+<li>replaint：屏幕的一部分重画，不影响整体布局，比如某个CSS的背景色变了，但元素的几何尺寸和位置不变。</li>
+<li>reflow： 意味着元件的几何尺寸变了，我们需要重新验证并计算渲染树。是渲染树的一部分或全部发生了变化。这就是Reflow，或是Layout。</li>
+</ul>
+<p>浏览器渲染引擎会先渲染不涉及尺寸和位置的replaint，之后在渲染需要涉及计算的尺寸位置的reflow。</p>
+<h2 id="reference"><a href="#reference" class="headerlink" title="reference"></a>reference</h2><p><a href="https://segmentfault.com/a/1190000012092552" target="_blank" rel="noopener">细说浏览器输入URL后发生了什么</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/43369093" target="_blank" rel="noopener">浏览器输入 URL 后发生了什么？</a></p>
+<p><a href="https://www.zhihu.com/question/34873227/answer/518086565" target="_blank" rel="noopener">在浏览器地址栏输入一个URL后回车，背后会进行哪些技术步骤？ - 车小胖的回答 - 知乎</a></p>
+<p><a href="https://github.com/skyline75489/what-happens-when-zh_CN" target="_blank" rel="noopener">whta-happens-when</a></p>
+<p><a href="https://www.ruanyifeng.com/blog/2014/02/ssl_tls.html" target="_blank" rel="noopener">SSL/TLS协议运行机制的概述</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://icestains.top/2019/08/09/what-happend-when-a-browser-get-a-url/" data-id="cjz5be501000qngpfvy63jbjq" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-博客再次复活" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/08/07/博客再次复活/" class="article-date">
@@ -90,7 +368,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://icestains.top/2019/08/07/博客再次复活/" data-id="cjz0wy86f000nigpflufcwr20" class="article-share-link">Share</a>
+      <a data-url="http://icestains.top/2019/08/07/博客再次复活/" data-id="cjz5be504000sngpfe93lgmea" class="article-share-link">Share</a>
       
       
     </footer>
@@ -116,7 +394,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://icestains.top/2019/07/22/vue踩坑/" data-id="cjz0wy86b000ligpfbt5m3m5y" class="article-share-link">Share</a>
+      <a data-url="http://icestains.top/2019/07/22/vue踩坑/" data-id="cjz5be4zy000ongpflhhb0kqz" class="article-share-link">Share</a>
       
       
     </footer>
@@ -167,7 +445,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://icestains.top/2019/07/17/build-Django-blog/" data-id="cjz0wy865000higpf3rcgqrjt" class="article-share-link">Share</a>
+      <a data-url="http://icestains.top/2019/07/17/build-Django-blog/" data-id="cjz5be4zk000hngpfodaqpwpd" class="article-share-link">Share</a>
       
       
     </footer>
@@ -217,7 +495,7 @@ output: 29</code></pre><hr>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://icestains.top/2018/08/05/重拾算法一/" data-id="cjz0wy8700010igpfiajdhq2c" class="article-share-link">Share</a>
+      <a data-url="http://icestains.top/2018/08/05/重拾算法一/" data-id="cjz5be51k0013ngpfcym5btc3" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/算法-Python/">算法, Python</a></li></ul>
@@ -313,11 +591,47 @@ output: 29</code></pre><hr>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://icestains.top/2018/08/05/实习日记三/" data-id="cjz0wy86m000sigpf8tcfp8yz" class="article-share-link">Share</a>
+      <a data-url="http://icestains.top/2018/08/05/实习日记三/" data-id="cjz5be514000yngpfjubrdc9o" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日记/">日记</a></li></ul>
 
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-helloworld" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/07/27/helloworld/" class="article-date">
+  <time datetime="2018-07-26T16:23:06.000Z" itemprop="datePublished">2018-07-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/07/27/helloworld/">helloworld</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Hello-World"><a href="#Hello-World" class="headerlink" title="Hello World"></a>Hello World</h2>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://icestains.top/2018/07/27/helloworld/" data-id="cjz5be4zn000ingpf9331r515" class="article-share-link">Share</a>
+      
+      
     </footer>
   </div>
   
@@ -364,270 +678,9 @@ output: 29</code></pre><hr>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://icestains.top/2018/07/27/hello-world/" data-id="cjz0wy868000jigpf6zi9nu0r" class="article-share-link">Share</a>
+      <a data-url="http://icestains.top/2018/07/27/hello-world/" data-id="cjz5be4zq000kngpfqjmjyjgp" class="article-share-link">Share</a>
       
       
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-helloworld" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/07/27/helloworld/" class="article-date">
-  <time datetime="2018-07-26T16:23:06.000Z" itemprop="datePublished">2018-07-27</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/27/helloworld/">helloworld</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Hello-World"><a href="#Hello-World" class="headerlink" title="Hello World"></a>Hello World</h2>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://icestains.top/2018/07/27/helloworld/" data-id="cjz0wy862000figpfp71dhs07" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-实习日记二" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/07/22/实习日记二/" class="article-date">
-  <time datetime="2018-07-21T16:00:00.000Z" itemprop="datePublished">2018-07-22</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/22/实习日记二/">实习日记二</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><code>摸鱼第二周</code></p>
-<hr>
-<h2 id="上周的工作"><a href="#上周的工作" class="headerlink" title="上周的工作"></a>上周的工作</h2><ul>
-<li>vue再次本当上手23333也不知道什么时候收藏夹里收藏过得vue教程重新翻出来看，不过还好，以前写过微信小程序，基本思路都一样，上手没难度。</li>
-<li>用vue写了一些小玩意，试了试一些好玩的功能，指路→<a href="https://icestains.github.io/vuetest/" target="_blank" rel="noopener">https://icestains.github.io/vuetest/</a>,之后可能会加一些新的好玩的东西上去，至少动画是要加上去的：）</li>
-</ul>
-<h3 id="上手GIS"><a href="#上手GIS" class="headerlink" title="上手GIS"></a>上手GIS</h3><ul>
-<li>空天信息研究所，画画地图咯。</li>
-<li>文档指路→<a href="http://anzhihun.coding.me/ol3-primer/index.html" target="_blank" rel="noopener">OpenLayers</a></li>
-<li>官方api文档 指路→<a href="https://openlayers.org" target="_blank" rel="noopener">OpenLayers API</a></li>
-</ul>
-<hr>
-<h2 id="今天了什么"><a href="#今天了什么" class="headerlink" title="今天了什么"></a>今天了什么</h2><ul>
-<li>参照文档搭建出了一个基本的地图实现了定位，放大缩小，移动地图，添加标记等一系列基本功能。离线地图绘制也掌握了一些，用离线图片也绘制出了相应的地图模块。</li>
-<li>写了一些小demo 指路→<a href="https://icestains.github.io/OpenLayers-Vue/" target="_blank" rel="noopener">OpenLayers demo</a></li>
-</ul>
-<hr>
-<h2 id="需要填的抗"><a href="#需要填的抗" class="headerlink" title="需要填的抗"></a>需要填的抗</h2><ul>
-<li><p>vue踩坑与填坑</p>
-<ul>
-<li>js引用图片问题</li>
-<li>bootstrap引入问题</li>
-<li>vuecli router的路径问题</li>
-<li>模块引用问题</li>
-</ul>
-</li>
-<li><p>OpenLayers踩坑与填坑</p>
-<ul>
-<li>baidu地图的偏移问题（坐标转换问题）</li>
-<li>地图的绘制与切换</li>
-<li>地图的标记方法参数解析</li>
-<li>矢量地图</li>
-<li>获取当前地图坐标信息</li>
-<li>瓦片地图</li>
-</ul>
-</li>
-</ul>
-<hr>
-<h2 id="明天emmmm"><a href="#明天emmmm" class="headerlink" title="明天emmmm"></a>明天emmmm</h2><p>明天看进度，后边东西还挺多的，两天看了还不到一半，后边熟悉之后应该会顺利一些</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://icestains.top/2018/07/22/实习日记二/" data-id="cjz0wy86k000rigpfbgt4vpeh" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日记/">日记</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-实习日记" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/07/18/实习日记/" class="article-date">
-  <time datetime="2018-07-18T15:16:00.000Z" itemprop="datePublished">2018-07-18</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/18/实习日记/">实习日记一</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="实习日记一"><a href="#实习日记一" class="headerlink" title="实习日记一"></a>实习日记一</h2><blockquote>
-<p>(摸鱼第四天)</p>
-</blockquote>
-<hr>
-<h2 id="记录一下最近做的事情吧"><a href="#记录一下最近做的事情吧" class="headerlink" title="记录一下最近做的事情吧"></a>记录一下最近做的事情吧</h2><h3 id="适应新的环境"><a href="#适应新的环境" class="headerlink" title="适应新的环境"></a>适应新的环境</h3><ul>
-<li>新的宿舍，六人间，但是实际只到了三个人，于是三个人都可以住在下铺了，分配了三个桌子，六个椅子可以非常舒服的分配空间了哈哈。</li>
-<li>组长今天刚回来，之前开会没他，然后这几天就完全就是在摸鱼状态，也没有什么具体的任务。</li>
-</ul>
-<h3 id="最近几天做的工作"><a href="#最近几天做的工作" class="headerlink" title="最近几天做的工作"></a>最近几天做的工作</h3><ul>
-<li>这里的电脑只可以访问内网，文件只能拷入不能拷出，于是环境配置过程中的所有的软件源都要用内部的，但是比较难受的就是一些软件和插件的缺失不好解决。</li>
-<li>大概了解了一下开发的内容，是一个地图加微信的软件，平台是魔改某为的一款手机，由于不是安卓，所以需要服务组的童靴们用C/C++去适配底层，我们组的主要任务就是用vue.js写界面和逻辑。</li>
-<li>配置环境。vue.js, vue-cli, node/yarn, 软件：webstorm, chrome, cmder 插件： less.</li>
-<li>vue以前看过一部分，最近正在看完整的文档，算是填之前开的坑吧。。</li>
-<li>vue-cli这次重新搭建，和以前搭建的时候有了挺大区别，应该是3.0的原因，看了一些博客大概是精简了很多配置文件。</li>
-<li>node好像看emmm好像没看完呢。。。填坑填坑。。不过这边用的是yarn，常用的命令好像没有太大区别。</li>
-<li>less/sass。本来三个常用的css预处理器，去年就应该上手用的，一直拖着就没有看，然后选了一个sass都马上看完了，今天组长发了一个项目模板，用的less。ok，fine，都看都看QAQ。(stylus: 你看看我 →_→ 。)</li>
-</ul>
-<hr>
-<h3 id="个人在做的"><a href="#个人在做的" class="headerlink" title="个人在做的"></a>个人在做的</h3><ul>
-<li>Django搭建的博客算是搭建（<a href="http://47.103.5.67/" target="_blank" rel="noopener">http://47.103.5.67/</a>）完了，最近在想给博客添加一些元素或者是修改一些元素，暂时没有什么好的想法。</li>
-<li>vue-cli正在上手，<a href="https://icestains.github.io/vuetest/" target="_blank" rel="noopener">这个链接</a>是目前在练手的一个项目（就是一个vue模板应用），有可能会把这个修改完成的放在博客的首页。</li>
-</ul>
-<hr>
-<blockquote>
-<p>明天应该会开一次小会，希望有点东西做。（摸鱼ing）</p>
-</blockquote>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://icestains.top/2018/07/18/实习日记/" data-id="cjz0wy86i000pigpf2m8fsjg2" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日记/">日记</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-2018-04-14-FEreport" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/04/14/2018-04-14-FEreport/" class="article-date">
-  <time datetime="2018-04-13T16:00:00.000Z" itemprop="datePublished">2018-04-14</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/04/14/2018-04-14-FEreport/">前端值班记录</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="主要学习内容"><a href="#主要学习内容" class="headerlink" title="主要学习内容"></a>主要学习内容</h1><ul>
-<li>前端基础介绍</li>
-<li>git的使用</li>
-<li>github的注册和搭建第一个仓库</li>
-<li>搭建博客或注册博客</li>
-<li>快应用和小程序的介绍</li>
-</ul>
-<h2 id="前端基础"><a href="#前端基础" class="headerlink" title="前端基础"></a>前端基础</h2><p>HTML\css\JS相关教程链接</p>
-<p>文档:</p>
-<ul>
-<li><a href="http://www.w3school.com.cn/" target="_blank" rel="noopener">w3school</a></li>
-<li><a href="https://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000" target="_blank" rel="noopener">廖雪峰JavaScript教程</a></li>
-</ul>
-<p>视频教程:</p>
-<ul>
-<li><a href="https://pan.baidu.com/s/1aNjYj8wOycKkAPVcUSjNYg" target="_blank" rel="noopener">2017暑期培训视频by李长航</a> 密码：amb6</li>
-<li><a href="https://pan.baidu.com/s/1DFMNXQ3IY6TI2EQRVQRiBw" target="_blank" rel="noopener">前端视频教程</a> 密码：hhwq</li>
-</ul>
-<h2 id="git"><a href="#git" class="headerlink" title="git"></a>git</h2><p>参考文档</p>
-<ul>
-<li><a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="noopener">廖雪峰的git教程</a></li>
-<li><a href="https://icestains.github.io/2017/11/02/git-Common-commands/" target="_blank" rel="noopener">我自己总结的git常用命令</a></li>
-</ul>
-<h2 id="github"><a href="#github" class="headerlink" title="github"></a>github</h2><p><a href="https://github.com/" target="_blank" rel="noopener">github</a>的注册和创建仓库,以及使用git命令行的方式操作git.</p>
-<h2 id="搭建博客"><a href="#搭建博客" class="headerlink" title="搭建博客"></a>搭建博客</h2><p>参考链接</p>
-<h3 id="Jekyll环境"><a href="#Jekyll环境" class="headerlink" title="Jekyll环境"></a>Jekyll环境</h3><ul>
-<li><a href="http://www.ruanyifeng.com/blog/2012/08/blogging_with_jekyll.html" target="_blank" rel="noopener">搭建一个免费的，无限流量的Blog—-github Pages和Jekyll入门</a></li>
-<li><a href="http://baixin.io/2016/10/jekyll_tutorials1/" target="_blank" rel="noopener">Jekyll搭建个人博客</a></li>
-</ul>
-<h3 id="hexo环境搭建方式"><a href="#hexo环境搭建方式" class="headerlink" title="hexo环境搭建方式"></a>hexo环境搭建方式</h3><ul>
-<li><a href="https://thief.one/2017/03/03/Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/" target="_blank" rel="noopener">Hexo搭建博客教程</a></li>
-<li><a href="https://zhuanlan.zhihu.com/p/26625249" target="_blank" rel="noopener">GitHub+Hexo 搭建个人网站详细教程</a></li>
-<li><a href="https://xuanwo.org/2015/03/26/hexo-intor/" target="_blank" rel="noopener">史上最详细的Hexo博客搭建图文教程</a></li>
-</ul>
-<h2 id="快应用与小程序"><a href="#快应用与小程序" class="headerlink" title="快应用与小程序"></a>快应用与小程序</h2><h3 id="快应用"><a href="#快应用" class="headerlink" title="快应用"></a>快应用</h3><p>什么是快应用</p>
-<ol>
-<li><p>快应用是基于手机硬件平台的新型应用形态，标准是由主流手机厂商组成的快应用联盟联合制定。</p>
-</li>
-<li><p>快应用标准的诞生将在研发接口、能力接入、开发者服务等层面建设标准平台，以平台化的生态模式对个人开发者和企业开发者全品类开放。</p>
-</li>
-<li><p>快应用具备传统APP完整的应用体验，无需安装、即点即用。</p>
-</li>
-</ol>
-<p><a href="https://doc.quickapp.cn/" target="_blank" rel="noopener">快应用开发文档</a></p>
-<h3 id="微信小程序"><a href="#微信小程序" class="headerlink" title="微信小程序"></a>微信小程序</h3><p>微信小程序是一种全新的连接用户与服务的方式，它可以在微信内被便捷地获取和传播，同时具有出色的使用体验。</p>
-<p><a href="https://developers.weixin.qq.com/miniprogram/dev/index.html" target="_blank" rel="noopener">微信小程序官方文档</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://icestains.top/2018/04/14/2018-04-14-FEreport/" data-id="cjz0wy85y000digpf489iz8pu" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/front-end-report/">front-end,report</a></li></ul>
-
     </footer>
   </div>
   
@@ -639,7 +692,7 @@ output: 29</code></pre><hr>
 
   <nav id="page-nav">
     
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
   </nav>
 
 </section>
@@ -685,23 +738,23 @@ output: 29</code></pre><hr>
       <ul>
         
           <li>
+            <a href="/2019/08/10/design-pattern/">design-pattern</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/10/javascript-singleton/">设计模式-singleton-js</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/09/what-happend-when-a-browser-get-a-url/">&#39;浏览器输入URL后发生了什么&#39;</a>
+          </li>
+        
+          <li>
             <a href="/2019/08/07/博客再次复活/">&#39;博客再次复活&#39;</a>
           </li>
         
           <li>
             <a href="/2019/07/22/vue踩坑/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2019/07/17/build-Django-blog/">&#39;Django搭建博客：Fabric3 部署更新到远程服务器&#39;</a>
-          </li>
-        
-          <li>
-            <a href="/2018/08/05/重拾算法一/">重拾算法</a>
-          </li>
-        
-          <li>
-            <a href="/2018/08/05/实习日记三/">实习日记三</a>
           </li>
         
       </ul>
